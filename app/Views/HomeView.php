@@ -19,7 +19,7 @@
 
     <header class="bg-dark navbar-sticky">
         <div class="navbar navbar-expand-lg navbar-dark">
-            <div class="container"><a class="navbar-brand d-none d-sm-block mr-4 order-lg-1" href="index.html" style="min-width: 7rem;"><img width="142" src="img/logo-light.png" alt="Cartzilla" /></a><a class="navbar-brand d-sm-none mr-2 order-lg-1" href="index.html" style="min-width: 4.625rem;"><img width="74" src="img/logo-icon-light.png" alt="Cartzilla" /></a>
+        <div class="container"><a class="navbar-brand d-none d-sm-block mr-4 order-lg-1" href="home" style="min-width: 7rem;"><img width="142" src="img/logo-light.png" alt="JetreneEshop" /></a><a class="navbar-brand d-sm-none mr-2 order-lg-1" href="home" style="min-width: 4.625rem;"><img width="74" src="img/logo-icon-light.png" alt="JetreneEshop" /></a>
                 <!-- Sub Navbar -- cart-wishlist-tracking-->
                 <?= $this->include('include/element/sub_navbar'); ?>
 
@@ -28,11 +28,11 @@
                     <?= $this->include('include/element/search'); ?>
                     <!-- Primary menu-->
                     <ul class="navbar-nav">
-                        <li  class="nav-link active"><a style ="color: #fe696a;"class="nav-link active"  href="home-fashion-store-v1.html">Home</li></a>
-                        <li><a class="nav-link" href="shop-grid-ls.html">Shop</a></li>
-                        <li><a class="nav-link" href="shop-categories.html">Categories</a></li>
-                        <li><a class="nav-link" href="help-topics.html">Help Center</a></li>
-                        <li><a class="nav-link" href="about.html">About us</a></li>
+                        <li><a class="nav-link active"  href="home">Home</li></a>
+                        <li><a class="nav-link" href="shop">Shop</a></li>
+                        <li><a class="nav-link" href="shop_category">Categories</a></li>
+                        <li><a class="nav-link" href="helpcenter">Help Center</a></li>
+                        <li><a class="nav-link" href="about">About us</a></li>
                         <li><a class="nav-link" href="contacts.html">Contacts</a></li>
                     </ul>
                 </div>

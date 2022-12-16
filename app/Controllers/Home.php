@@ -12,4 +12,12 @@ class Home extends BaseController
     {
         return view('homeview');
     }
+    public function about()
+    {
+        return view('aboutview');
+    }
+    public function contacts()
+    {
+        return view('Contactview');
+    }
 }

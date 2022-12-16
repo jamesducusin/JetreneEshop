@@ -1,5 +1,5 @@
     <meta charset="utf-8">
-    <title>Cartzilla | Multipurpose Bootstrap E-commerce Template
+    <title>Eshop | Jetrene Presyong Divisoria Ecommerce
     </title>
     <!-- SEO Meta Tags-->
     <meta name="description" content="Cartzilla - Bootstrap E-commerce Template">

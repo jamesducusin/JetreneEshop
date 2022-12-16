@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta + Resources-->
+    <?= $this->include('include/asset/head'); ?>
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css">
+</head>
+<!-- Body-->
+
+<body class="toolbar-enabled">
+    <!-- Sign in / sign up modal-->
+    <?= $this->include('include/modal/signup_modal'); ?>
+    <!-- navbar -->
+    <header class="bg-dark navbar-sticky">
+        <div class="navbar navbar-expand-lg navbar-dark">
+        <div class="container"><a class="navbar-brand d-none d-sm-block mr-4 order-lg-1" href="home" style="min-width: 7rem;"><img width="142" src="img/logo-light.png" alt="JetreneEshop" /></a><a class="navbar-brand d-sm-none mr-2 order-lg-1" href="home" style="min-width: 4.625rem;"><img width="74" src="img/logo-icon-light.png" alt="JetreneEshop" /></a>
+                <!-- Sub Navbar -- cart-wishlist-tracking-->
+                <?= $this->include('include/element/sub_navbar'); ?>
+                <div class="collapse navbar-collapse mr-auto order-lg-2" id="navbarCollapse">
+                    <!-- Search-->
+                    <?= $this->include('include/element/search'); ?>
+                    <!-- Primary menu-->
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link" href="home">Home</li></a>
+                        <li><a class="nav-link" href="shop">Shop</a></li>
+                        <li><a class="nav-link" href="shop_category">Categories</a></li>
+                        <li><a class="nav-link active" href="helpcenter">Help Center</a></li>
+                        <li><a class="nav-link" href="about">About us</a></li>
+                        <li><a class="nav-link" href="contacts.html">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Search collapse-->
+        <?= $this->include('include/element/search_collapse'); ?>
+    </header>
+    <!-- Page title-->
+    <!-- Page Content-->
+    <section class="bg-dark bg-size-cover bg-position-center-x position-relative py-5 mb-5" style="background-image: url(img/pages/help-hero-bg.jpg);"><span class="bg-overlay bg-darker" style="opacity: .65;"></span>
+        <div class="bg-overlay-content container py-4 my-3">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="text-light text-center">How can we help?</h1>
+                    <p class="pb-3 text-light text-center">Ask Questions. Browse Topics. Find Answers.</p>
+                    <div class="input-group-overlay input-group-lg mb-3">
+                        <div class="input-group-prepend-overlay"><span class="input-group-text"><i class="czi-search"></i></span></div>
+                        <input class="form-control prepended-form-control" type="search" placeholder="Ask your question...">
+                    </div>
+                    <div class="font-size-sm"><span class="text-light opacity-50 mr-1">Suggestions:</span><a class="nav-link-style nav-link-light mr-1 pb-1 border-bottom border-light" href="#"> Dashboard,</a><a class="nav-link-style nav-link-light mr-1 pb-1 border-bottom border-light" href="#">Payment,</a><a class="nav-link-style nav-link-light mr-1 pb-1 border-bottom border-light" href="#"> Refunds,</a><a class="nav-link-style nav-link-light mr-1 pb-1 border-bottom border-light" href="#"> Delivery</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Topics grid-->
+    <section class="container py-3">
+        <h2 class="h3 text-center">Select a topic</h2>
+        <div class="row pt-4">
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="help-single-topic.html">
+                    <div class="card-body text-center"><i class="czi-user-circle h2 mt-2 mb-4 text-primary"></i>
+                        <h6>Managing account</h6>
+                        <p class="font-size-sm text-muted pb-2">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non euismod tempur accusantium.</p>
+                        <div class="btn btn-outline-primary btn-sm mb-2">Learn more</div>
+                    </div>
+                </a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="help-single-topic.html">
+                    <div class="card-body text-center"><i class="czi-laptop h2 mt-2 mb-4 text-primary"></i>
+                        <h6>Working with dashboard</h6>
+                        <p class="font-size-sm text-muted pb-2">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non euismod tempur accusantium.</p>
+                        <div class="btn btn-outline-primary btn-sm mb-2">Learn more</div>
+                    </div>
+                </a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="help-single-topic.html">
+                    <div class="card-body text-center"><i class="czi-card h2 mt-2 mb-4 text-primary"></i>
+                        <h6>Payment options</h6>
+                        <p class="font-size-sm text-muted pb-2">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non euismod tempur accusantium.</p>
+                        <div class="btn btn-outline-primary btn-sm mb-2">Learn more</div>
+                    </div>
+                </a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="help-single-topic.html">
+                    <div class="card-body text-center"><i class="czi-delivery h2 mt-2 mb-4 text-primary"></i>
+                        <h6>Delivery information</h6>
+                        <p class="font-size-sm text-muted pb-2">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non euismod tempur accusantium.</p>
+                        <div class="btn btn-outline-primary btn-sm mb-2">Learn more</div>
+                    </div>
+                </a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="help-single-topic.html">
+                    <div class="card-body text-center"><i class="czi-currency-exchange h2 mt-2 mb-4 text-primary"></i>
+                        <h6>Refund policy</h6>
+                        <p class="font-size-sm text-muted pb-2">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non euismod tempur accusantium.</p>
+                        <div class="btn btn-outline-primary btn-sm mb-2">Learn more</div>
+                    </div>
+                </a></div>
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="help-single-topic.html">
+                    <div class="card-body text-center"><i class="czi-loudspeaker h2 mt-2 mb-4 text-primary"></i>
+                        <h6>Affiliate program</h6>
+                        <p class="font-size-sm text-muted pb-2">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non euismod tempur accusantium.</p>
+                        <div class="btn btn-outline-primary btn-sm mb-2">Learn more</div>
+                    </div>
+                </a></div>
+        </div>
+    </section>
+    <!-- FAQ-->
+    <section class="container pt-4 pb-5">
+        <h2 class="h3 text-center">F.A.Q.</h2>
+        <div class="row pt-4">
+            <div class="col-sm-6">
+                <ul class="list-unstyled">
+                    <li class="d-flex align-items-center border-bottom pb-3 mb-3"><i class="czi-book text-muted mr-2"></i><a class="nav-link-style" href="#">How long will delivery take?</a></li>
+                    <li class="d-flex align-items-center border-bottom pb-3 mb-3"><i class="czi-book text-muted mr-2"></i><a class="nav-link-style" href="#">What payment methods do you accept?</a></li>
+                    <li class="d-flex align-items-center border-bottom pb-3 mb-3"><i class="czi-book text-muted mr-2"></i><a class="nav-link-style" href="#">Do you ship internationally?</a></li>
+                    <li class="d-flex align-items-center border-bottom pb-3 mb-3"><i class="czi-book text-muted mr-2"></i><a class="nav-link-style" href="#">Do I need an account to place an order?</a></li>
+                    <li class="d-flex align-items-center border-bottom pb-3 mb-3"><i class="czi-book text-muted mr-2"></i><a class="nav-link-style" href="#">How can I track my order?</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <ul class="list-unstyled">
+                    <li class="d-flex align-items-center border-bottom pb-3 mb-3"><i class="czi-book text-muted mr-2"></i><a class="nav-link-style" href="#">What are the product refund conditions?</a></li>
+                    <li class="d-flex align-items-center border-bottom pb-3 mb-3"><i class="czi-book text-muted mr-2"></i><a class="nav-link-style" href="#">Do you have discounts for returning customers?</a></li>
+                    <li class="d-flex align-items-center border-bottom pb-3 mb-3"><i class="czi-book text-muted mr-2"></i><a class="nav-link-style" href="#">How do your referral program work?</a></li>
+                    <li class="d-flex align-items-center border-bottom pb-3 mb-3"><i class="czi-book text-muted mr-2"></i><a class="nav-link-style" href="#">Where I can view and download invoices for my orders?</a></li>
+                    <li class="d-flex align-items-center border-bottom pb-3 mb-3"><i class="czi-book text-muted mr-2"></i><a class="nav-link-style" href="#">Do you provide technical support after the purchase?</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Submit request-->
+    <section class="container text-center pt-1 pb-5 mb-2">
+        <h2 class="h4 pb-3">Haven't found the answer? We can help.</h2><i class="czi-help h3 text-primary d-block mb-4"></i><a class="btn btn-primary" href="help-submit-request.html">Submit a request</a>
+        <p class="font-size-sm pt-4">Contact us and we’ll get back to you as soon as possible.</p>
+    </section>
+    <!-- Footer-->
+
+    <?= $this->include('include/element/footer'); ?>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <?= $this->include('include/asset/end'); ?>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+</body>
+
+</html>

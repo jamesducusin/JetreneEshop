@@ -8,11 +8,15 @@ class Shop extends BaseController
 {
     public function index()
     {
-        
     }
 
     public function shop()
     {
         return view('shopview');
+    }
+
+    public function shop_category()
+    {
+        return view('categoryview');
     }
 }

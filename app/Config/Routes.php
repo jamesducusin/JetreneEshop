@@ -39,9 +39,19 @@ $routes->set404Override();
 //Home
 $routes->get('/', 'Home::index');
 $routes->get('/home', 'Home::home');
+$routes->get('/about', 'Home::about');
+$routes->get('/contacts', 'Home::contacts');
 
 //Shop
 $routes->get('/shop', 'Shop::shop');
+$routes->get('/shop_category', 'Shop::shop_category');
+
+//Help Center
+$routes->get('/helpcenter', 'Help::helpcenter');
+
+
+
+
 
 /*
  * --------------------------------------------------------------------
