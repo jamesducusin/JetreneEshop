@@ -8,3 +8,53 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-16 12:22:55 --> Invalid file: OrderView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('OrderView.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('OrderView', [], true)
+ 3 APPPATH\Controllers\UserDash.php(15): view('OrderView')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserDash->orders()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserDash))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-16 12:22:56 --> Invalid file: OrderView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('OrderView.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('OrderView', [], true)
+ 3 APPPATH\Controllers\UserDash.php(15): view('OrderView')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserDash->orders()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserDash))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-16 12:25:38 --> Invalid file: OrderView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('OrderView.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('OrderView', [], true)
+ 3 APPPATH\Controllers\UserDash.php(15): view('OrderView')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserDash->orders()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserDash))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-16 12:25:57 --> Invalid file: UserDash/SupportView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('UserDash/SupportView.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('UserDash/SupportView', [], true)
+ 3 APPPATH\Controllers\UserDash.php(24): view('UserDash/SupportView')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserDash->support()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserDash))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-16 13:40:02 --> Invalid file: UserDash/SupportView.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('UserDash/SupportView.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('UserDash/SupportView', [], true)
+ 3 APPPATH\Controllers\UserDash.php(28): view('UserDash/SupportView')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserDash->support()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserDash))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

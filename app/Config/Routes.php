@@ -45,9 +45,29 @@ $routes->get('/contacts', 'Home::contacts');
 //Shop
 $routes->get('/shop', 'Shop::shop');
 $routes->get('/shop_category', 'Shop::shop_category');
+$routes->get('/shoplist', 'Shop::shoplist');
 
 //Help Center
 $routes->get('/helpcenter', 'Help::helpcenter');
+$routes->get('/helpsingle', 'Help::helpsingle');
+
+//Cart
+$routes->get('/cart', 'Cart::cart');
+
+//Checkout
+$routes->get('/tracking', 'Checkout::tracking');
+
+//User Dashboard
+$routes->get('/orders', 'UserDash::orders');
+$routes->get('/wishlist', 'UserDash::wishlist');
+$routes->get('/support', 'UserDash::support');
+$routes->get('/single', 'UserDash::single');
+$routes->get('/singlesupport', 'UserDash::singlesupport');
+$routes->get('/profile', 'UserDash::profile');
+$routes->get('/address', 'UserDash::address');
+$routes->get('/payment', 'UserDash::payment');
+$routes->get('/signin', 'UserDash::signin');
+
 
 
 

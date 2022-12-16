@@ -2,23 +2,23 @@
 <html lang="en">
 
 <head>
-    <!-- Meta + Resources-->
-    <?= $this->include('include/asset/head'); ?>
+   <!-- Meta + Resources-->
+   <?= $this->include('include/asset/head'); ?>
     <!-- Specific Resources-->
     <link rel="stylesheet" media="screen" href="vendor/nouislider/distribute/nouislider.min.css" />
     <link rel="stylesheet" media="screen" href="vendor/drift-zoom/dist/drift-basic.min.css" />
-    
     <!-- Main Theme Styles + Bootstrap-->
     <link rel="stylesheet" media="screen" href="css/theme.min.css">
 </head>
 <!-- Body-->
 
 <body class="toolbar-enabled">
-    <!-- Sign in / sign up modal-->
-    <?= $this->include('include/modal/signup_modal'); ?>
-
-    <!-- navbar -->
-    <header class="bg-dark navbar-sticky">
+        <!-- Sign in / sign up modal-->
+        <?= $this->include('include/modal/signup_modal'); ?>
+    <!-- Navbar-->
+   
+     <!-- navbar -->
+     <header class="bg-dark navbar-sticky">
         <div class="navbar navbar-expand-lg navbar-dark">
         <div class="container"><a class="navbar-brand d-none d-sm-block mr-4 order-lg-1" href="home" style="min-width: 7rem;"><img width="142" src="img/logo-light.png" alt="JetreneEshop" /></a><a class="navbar-brand d-sm-none mr-2 order-lg-1" href="home" style="min-width: 4.625rem;"><img width="74" src="img/logo-icon-light.png" alt="JetreneEshop" /></a>
                 <!-- Sub Navbar -- cart-wishlist-tracking-->
@@ -41,21 +41,22 @@
         <!-- Search collapse-->
         <?= $this->include('include/element/search_collapse'); ?>
     </header>
+    <!-- Page title-->
     <!-- Page Title-->
     <div class="page-title-overlap bg-dark pt-4">
         <div class="container d-lg-flex justify-content-between py-2 py-lg-3">
             <div class="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb breadcrumb-light flex-lg-nowrap justify-content-center justify-content-lg-start">
-                        <li class="breadcrumb-item"><a class="text-nowrap" href="home"><i class="czi-home"></i>Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-nowrap" href="index.html"><i class="czi-home"></i>Home</a></li>
                         <li class="breadcrumb-item text-nowrap"><a href="#">Shop</a>
                         </li>
-                        <li class="breadcrumb-item text-nowrap active" aria-current="page">Grid left sidebar</li>
+                        <li class="breadcrumb-item text-nowrap active" aria-current="page">List left sidebar</li>
                     </ol>
                 </nav>
             </div>
             <div class="order-lg-1 pr-lg-4 text-center text-lg-left">
-                <h1 class="h3 text-light mb-0">Shop grid left sidebar</h1>
+                <h1 class="h3 text-light mb-0">Shop list left sidebar</h1>
             </div>
         </div>
     </div>
@@ -618,24 +619,22 @@
                         </div>
                     </div>
                     <div class="d-flex pb-3"><a class="nav-link-style nav-link-light mr-3" href="#"><i class="czi-arrow-left"></i></a><span class="font-size-md text-light">1 / 5</span><a class="nav-link-style nav-link-light ml-3" href="#"><i class="czi-arrow-right"></i></a></div>
-                    <div class="d-none d-sm-flex pb-3"><a class="btn btn-icon nav-link-style bg-light text-dark disabled opacity-100 mr-2" href="#"><i class="czi-view-grid"></i></a><a class="btn btn-icon nav-link-style nav-link-light" href="shoplist"><i class="czi-view-list"></i></a></div>
+                    <div class="d-none d-sm-flex pb-3"><a class="btn btn-icon nav-link-style nav-link-light mr-2" href="shop"><i class="czi-view-grid"></i></a><a class="btn btn-icon nav-link-style bg-light text-dark disabled opacity-100" href="#"><i class="czi-view-list"></i></a></div>
                 </div>
-                <!-- Products grid-->
-                <div class="row mx-n2">
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/01.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Sneakers &amp; Keds</a>
-                                <h3 class="product-title font-size-sm"><a href="single">Women Colorblock Sneakers</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-accent">$154.<small>00</small></span></div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
-                                    </div>
+                <!-- Products list-->
+                <!-- Product-->
+                <div class="card product-card product-list">
+                    <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button>
+                    <div class="d-sm-flex align-items-center"><a class="product-list-thumb" href="single"><img src="img/shop/catalog/01.jpg" alt="Product"></a>
+                        <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Sneakers &amp; Keds</a>
+                            <h3 class="product-title font-size-base"><a href="single">Women Colorblock Sneakers</a></h3>
+                            <div class="d-flex justify-content-between">
+                                <div class="product-price"><span class="text-accent">$154.<small>00</small></span></div>
+                                <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
                                 </div>
                             </div>
                             <div class="card-body card-body-hidden">
-                                <div class="text-center pb-2">
+                                <div class="pb-2">
                                     <div class="custom-control custom-option custom-control-inline mb-2">
                                         <input class="custom-control-input" type="radio" name="size1" id="s-75">
                                         <label class="custom-option-label" for="s-75">7.5</label>
@@ -653,28 +652,28 @@
                                         <label class="custom-option-label" for="s-90">9</label>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-
+                                <button class="btn btn-primary btn-sm mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
+                                
                             </div>
                         </div>
-                        <hr class="d-sm-none">
                     </div>
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card"><span class="badge badge-danger badge-shadow">Sale</span>
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/02.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Women’s T-shirt</a>
-                                <h3 class="product-title font-size-sm"><a href="single">Cotton Lace Blouse</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-accent">$28.<small>50</small></span>
-                                        <del class="font-size-sm text-muted">38.<small>50</small></del>
-                                    </div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i><i class="sr-star czi-star"></i>
-                                    </div>
+                </div>
+                <hr class="pt-3 mt-3">
+                <!-- Product-->
+                <div class="card product-card product-list"><span class="badge badge-danger badge-shadow">Sale</span>
+                    <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button>
+                    <div class="d-sm-flex align-items-center"><a class="product-list-thumb" href="single"><img src="img/shop/catalog/02.jpg" alt="Product"></a>
+                        <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Women’s T-shirt</a>
+                            <h3 class="product-title font-size-base"><a href="single">Cotton Lace Blouse</a></h3>
+                            <div class="d-flex justify-content-between">
+                                <div class="product-price"><span class="text-accent">$28.<small>50</small></span>
+                                    <del class="font-size-sm text-muted">38.<small>50</small></del>
+                                </div>
+                                <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i><i class="sr-star czi-star"></i>
                                 </div>
                             </div>
                             <div class="card-body card-body-hidden">
-                                <div class="text-center pb-2">
+                                <div class="pb-2">
                                     <div class="custom-control custom-option custom-control-inline mb-2">
                                         <input class="custom-control-input" type="radio" name="color1" id="white" checked>
                                         <label class="custom-option-label rounded-circle" for="white"><span class="custom-option-color rounded-circle" style="background-color: #eaeaeb;"></span></label>
@@ -693,7 +692,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex mb-2">
-                                    <select class="custom-select custom-select-sm mr-2">
+                                    <select class="custom-select custom-select-sm mr-2" style="max-width: 6rem;">
                                         <option>XS</option>
                                         <option>S</option>
                                         <option>M</option>
@@ -702,27 +701,25 @@
                                     </select>
                                     <button class="btn btn-primary btn-sm" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
                                 </div>
-
+                                
                             </div>
                         </div>
-                        <hr class="d-sm-none">
                     </div>
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist">
-                                <i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single">
-                                <img src="img/shop/catalog/03.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Women’s Shorts</a>
-                                <h3 class="product-title font-size-sm"><a href="single">Mom High Waist Shorts</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-accent">$39.<small>50</small></span></div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i>
-                                    </div>
+                </div>
+                <hr class="pt-3 mt-3">
+                <!-- Product-->
+                <div class="card product-card product-list">
+                    <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button>
+                    <div class="d-sm-flex align-items-center"><a class="product-list-thumb" href="single"><img src="img/shop/catalog/03.jpg" alt="Product"></a>
+                        <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Women’s Shorts</a>
+                            <h3 class="product-title font-size-base"><a href="single">Mom High Waist Shorts</a></h3>
+                            <div class="d-flex justify-content-between">
+                                <div class="product-price"><span class="text-accent">$39.<small>50</small></span></div>
+                                <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i>
                                 </div>
                             </div>
                             <div class="card-body card-body-hidden">
-                                <div class="text-center pb-2">
+                                <div class="pb-2">
                                     <div class="custom-control custom-option custom-control-inline mb-2">
                                         <input class="custom-control-input" type="radio" name="size2" id="xs">
                                         <label class="custom-option-label" for="xs">XS</label>
@@ -740,26 +737,26 @@
                                         <label class="custom-option-label" for="l">L</label>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-
+                                <button class="btn btn-primary btn-sm mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
+                                
                             </div>
                         </div>
-                        <hr class="d-sm-none">
                     </div>
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/04.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Sportswear</a>
-                                <h3 class="product-title font-size-sm"><a href="single">Women Sports Jacket</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-accent">$68.<small>40</small></span></div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
-                                    </div>
+                </div>
+                <hr class="pt-3 mt-3">
+                <!-- Product-->
+                <div class="card product-card product-list">
+                    <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button>
+                    <div class="d-sm-flex align-items-center"><a class="product-list-thumb" href="single"><img src="img/shop/catalog/04.jpg" alt="Product"></a>
+                        <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Sportswear</a>
+                            <h3 class="product-title font-size-base"><a href="single">Women Sports Jacket</a></h3>
+                            <div class="d-flex justify-content-between">
+                                <div class="product-price"><span class="text-accent">$68.<small>40</small></span></div>
+                                <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
                                 </div>
                             </div>
                             <div class="card-body card-body-hidden">
-                                <div class="text-center pb-2">
+                                <div class="pb-2">
                                     <div class="custom-control custom-option custom-control-inline mb-2">
                                         <input class="custom-control-input" type="radio" name="size3" id="xs2" checked>
                                         <label class="custom-option-label" for="xs2">XS</label>
@@ -777,44 +774,44 @@
                                         <label class="custom-option-label" for="l2">L</label>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-
+                                <button class="btn btn-primary btn-sm mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
+                                
                             </div>
                         </div>
-                        <hr class="d-sm-none">
                     </div>
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/05.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Sunglasses</a>
-                                <h3 class="product-title font-size-sm"><a href="single">Polarized Sunglasses</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-muted font-size-sm">Out of stock</span></div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
-                                    </div>
+                </div>
+                <hr class="pt-3 mt-3">
+                <!-- Product-->
+                <div class="card product-card product-list">
+                    <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button>
+                    <div class="d-sm-flex align-items-center"> <a class="product-list-thumb" href="single"><img src="img/shop/catalog/05.jpg" alt="Product"></a>
+                        <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Sunglasses</a>
+                            <h3 class="product-title font-size-base"><a href="single">Polarized Sunglasses</a></h3>
+                            <div class="d-flex justify-content-between">
+                                <div class="product-price"><span class="text-muted font-size-sm">Out of stock</span></div>
+                                <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
                                 </div>
                             </div>
-                            <div class="card-body card-body-hidden"><a class="btn btn-secondary btn-sm btn-block mb-2" href="single">View details</a>
-
+                            <div class="card-body card-body-hidden"><a class="btn btn-secondary btn-sm mb-2" href="single">View details</a>
+                                
                             </div>
                         </div>
-                        <hr class="d-sm-none">
                     </div>
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/06.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Backpacks</a>
-                                <h3 class="product-title font-size-sm"><a href="single">TH Jeans City Backpack</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-accent">$79.<small>50</small></span></div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i><i class="sr-star czi-star"></i>
-                                    </div>
+                </div>
+                <hr class="pt-3 mt-3">
+                <!-- Product-->
+                <div class="card product-card product-list">
+                    <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button>
+                    <div class="d-sm-flex align-items-center"><a class="product-list-thumb" href="single"><img src="img/shop/catalog/06.jpg" alt="Product"></a>
+                        <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Backpacks</a>
+                            <h3 class="product-title font-size-base"><a href="single">TH Jeans City Backpack</a></h3>
+                            <div class="d-flex justify-content-between">
+                                <div class="product-price"><span class="text-accent">$79.<small>50</small></span></div>
+                                <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i><i class="sr-star czi-star"></i>
                                 </div>
                             </div>
                             <div class="card-body card-body-hidden">
-                                <div class="text-center pb-2">
+                                <div class="pb-2">
                                     <div class="custom-control custom-option custom-control-inline mb-2">
                                         <input class="custom-control-input" type="radio" name="color2" id="khaki" checked>
                                         <label class="custom-option-label rounded-circle" for="khaki"><span class="custom-option-color rounded-circle" style="background-color: #97947c;"></span></label>
@@ -828,37 +825,32 @@
                                         <label class="custom-option-label rounded-circle" for="white2"><span class="custom-option-color rounded-circle" style="background-color: #eaeaeb;"></span></label>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-
+                                <button class="btn btn-primary btn-sm mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Banner-->
-                <div class="py-sm-2">
-                    <div class="d-sm-flex justify-content-between align-items-center bg-secondary overflow-hidden mb-4 rounded-lg">
-                        <div class="py-4 my-2 my-md-0 py-md-5 px-4 ml-md-3 text-center text-sm-left">
-                            <h4 class="font-size-lg font-weight-light mb-2">Converse All Star</h4>
-                            <h3 class="mb-4">Make Your Day Comfortable</h3><a class="btn btn-primary btn-shadow btn-sm" href="#">Shop Now</a>
-                        </div><img class="d-block ml-auto" src="img/shop/catalog/banner.jpg" alt="Shop Converse">
-                    </div>
+                <div class="d-sm-flex justify-content-between align-items-center bg-secondary overflow-hidden my-4 rounded-lg">
+                    <div class="py-4 my-2 my-md-0 py-md-5 px-4 ml-md-3 text-center text-sm-left">
+                        <h4 class="font-size-lg font-weight-light mb-2">Converse All Star</h4>
+                        <h3 class="mb-4">Make Your Day Comfortable</h3><a class="btn btn-primary btn-shadow btn-sm" href="#">Shop Now</a>
+                    </div><img class="d-block ml-auto" src="img/shop/catalog/banner.jpg" alt="Shop Converse">
                 </div>
-                <!-- Products grid-->
-                <div class="row mx-n2">
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/07.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Women's Swimwear</a>
-                                <h3 class="product-title font-size-sm"><a href="single">Two-Piece Bikini in Print</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-accent">$18.<small>99</small></span></div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
-                                    </div>
+                <!-- Product-->
+                <div class="card product-card product-list">
+                    <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button>
+                    <div class="d-sm-flex align-items-center"><a class="product-list-thumb" href="single"><img src="img/shop/catalog/07.jpg" alt="Product"></a>
+                        <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Women's Swimwear</a>
+                            <h3 class="product-title font-size-base"><a href="single">Two-Piece Bikini in Print</a></h3>
+                            <div class="d-flex justify-content-between">
+                                <div class="product-price"><span class="text-accent">$18.<small>99</small></span></div>
+                                <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
                                 </div>
                             </div>
                             <div class="card-body card-body-hidden">
-                                <div class="text-center pb-2">
+                                <div class="pb-2">
                                     <div class="custom-control custom-option custom-control-inline mb-2">
                                         <input class="custom-control-input" type="radio" name="size4" id="xs3" checked>
                                         <label class="custom-option-label" for="xs3">XS</label>
@@ -872,45 +864,45 @@
                                         <label class="custom-option-label" for="m3">M</label>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-
+                                <button class="btn btn-primary btn-sm mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
+                                
                             </div>
                         </div>
-                        <hr class="d-sm-none">
                     </div>
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/08.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Kid's Toys</a>
-                                <h3 class="product-title font-size-sm"><a href="single">Soft Panda Teddy Bear</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-accent">$14.<small>99</small></span></div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i>
-                                    </div>
+                </div>
+                <hr class="pt-3 mt-3">
+                <!-- Product-->
+                <div class="card product-card product-list">
+                    <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button>
+                    <div class="d-sm-flex align-items-center"><a class="product-list-thumb" href="single"><img src="img/shop/catalog/08.jpg" alt="Product"></a>
+                        <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Kid's Toys</a>
+                            <h3 class="product-title font-size-base"><a href="single">Soft Panda Teddy Bear</a></h3>
+                            <div class="d-flex justify-content-between">
+                                <div class="product-price"><span class="text-accent">$14.<small>99</small></span></div>
+                                <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i>
                                 </div>
                             </div>
                             <div class="card-body card-body-hidden">
-                                <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-
+                                <button class="btn btn-primary btn-sm mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
+                                
                             </div>
                         </div>
-                        <hr class="d-sm-none">
                     </div>
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/09.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Cosmetics</a>
-                                <h3 class="product-title font-size-sm"><a href="single">Metallic Lipstick (Crimson)</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-accent">$12.<small>99</small></span></div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
-                                    </div>
+                </div>
+                <hr class="pt-3 mt-3">
+                <!-- Product-->
+                <div class="card product-card product-list">
+                    <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button>
+                    <div class="d-sm-flex align-items-center"><a class="product-list-thumb" href="single"><img src="img/shop/catalog/09.jpg" alt="Product"></a>
+                        <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Cosmetics</a>
+                            <h3 class="product-title font-size-base"><a href="single">Metallic Lipstick (Crimson)</a></h3>
+                            <div class="d-flex justify-content-between">
+                                <div class="product-price"><span class="text-accent">$12.<small>99</small></span></div>
+                                <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
                                 </div>
                             </div>
                             <div class="card-body card-body-hidden">
-                                <div class="text-center pb-2">
+                                <div class="pb-2">
                                     <div class="custom-control custom-option custom-control-inline mb-2">
                                         <input class="custom-control-input" type="radio" name="color2" id="crimson" checked>
                                         <label class="custom-option-label rounded-circle" for="crimson"><span class="custom-option-color rounded-circle" style="background-color: #bd3c82;"></span></label>
@@ -924,45 +916,45 @@
                                         <label class="custom-option-label rounded-circle" for="palm"><span class="custom-option-color rounded-circle" style="background-color: #ca8799;"></span></label>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-
+                                <button class="btn btn-primary btn-sm mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
+                                
                             </div>
                         </div>
-                        <hr class="d-sm-none">
                     </div>
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/10.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Accessories</a>
-                                <h3 class="product-title font-size-sm"><a href="single">5-Pack Multicolor Bracelets</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-accent">$7.<small>99</small></span></div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i>
-                                    </div>
+                </div>
+                <hr class="pt-3 mt-3">
+                <!-- Product-->
+                <div class="card product-card product-list">
+                    <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button>
+                    <div class="d-sm-flex align-items-center"><a class="product-list-thumb" href="single"><img src="img/shop/catalog/10.jpg" alt="Product"></a>
+                        <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Accessories</a>
+                            <h3 class="product-title font-size-base"><a href="single">5-Pack Multicolor Bracelets</a></h3>
+                            <div class="d-flex justify-content-between">
+                                <div class="product-price"><span class="text-accent">$7.<small>99</small></span></div>
+                                <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i>
                                 </div>
                             </div>
                             <div class="card-body card-body-hidden">
-                                <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-
+                                <button class="btn btn-primary btn-sm mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
+                                
                             </div>
                         </div>
-                        <hr class="d-sm-none">
                     </div>
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/11.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Sandals</a>
-                                <h3 class="product-title font-size-sm"><a href="single">Soft Footbed Sandals</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-accent">$99.<small>50</small></span></div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
-                                    </div>
+                </div>
+                <hr class="pt-3 mt-3">
+                <!-- Product-->
+                <div class="card product-card product-list">
+                    <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button>
+                    <div class="d-sm-flex align-items-center"><a class="product-list-thumb" href="single"><img src="img/shop/catalog/11.jpg" alt="Product"></a>
+                        <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Sandals</a>
+                            <h3 class="product-title font-size-base"><a href="single">Soft Footbed Sandals</a></h3>
+                            <div class="d-flex justify-content-between">
+                                <div class="product-price"><span class="text-accent">$99.<small>50</small></span></div>
+                                <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
                                 </div>
                             </div>
                             <div class="card-body card-body-hidden">
-                                <div class="text-center pb-2">
+                                <div class="pb-2">
                                     <div class="custom-control custom-option custom-control-inline mb-2">
                                         <input class="custom-control-input" type="radio" name="color1" id="blue2" checked>
                                         <label class="custom-option-label rounded-circle" for="blue2"><span class="custom-option-color rounded-circle" style="background-color: #879fb3;"></span></label>
@@ -977,7 +969,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex mb-2">
-                                    <select class="custom-select custom-select-sm mr-2">
+                                    <select class="custom-select custom-select-sm mr-2" style="max-width: 6rem;">
                                         <option>9.5</option>
                                         <option>10</option>
                                         <option>10.5</option>
@@ -986,25 +978,25 @@
                                     </select>
                                     <button class="btn btn-primary btn-sm" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
                                 </div>
-
+                                
                             </div>
                         </div>
-                        <hr class="d-sm-none">
                     </div>
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/12.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Hats</a>
-                                <h3 class="product-title font-size-sm"><a href="single">3-Color Sun Stash Hat</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-accent">$25.<small>99</small></span></div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i>
-                                    </div>
+                </div>
+                <hr class="pt-3 mt-3">
+                <!-- Product-->
+                <div class="card product-card product-list">
+                    <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button>
+                    <div class="d-sm-flex align-items-center"><a class="product-list-thumb" href="single"><img src="img/shop/catalog/12.jpg" alt="Product"></a>
+                        <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Hats</a>
+                            <h3 class="product-title font-size-base"><a href="single">3-Color Sun Stash Hat</a></h3>
+                            <div class="d-flex justify-content-between">
+                                <div class="product-price"><span class="text-accent">$25.<small>99</small></span></div>
+                                <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i>
                                 </div>
                             </div>
                             <div class="card-body card-body-hidden">
-                                <div class="text-center pb-2">
+                                <div class="pb-2">
                                     <div class="custom-control custom-option custom-control-inline mb-2">
                                         <input class="custom-control-input" type="radio" name="size5" id="s4" checked>
                                         <label class="custom-option-label" for="s4">S</label>
@@ -1018,122 +1010,13 @@
                                         <label class="custom-option-label" for="l4">L</label>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-
-                            </div>
-                        </div>
-                        <hr class="d-sm-none">
-                    </div>
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card"><span class="badge badge-danger badge-shadow">Sale</span>
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/13.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s T-shirts</a>
-                                <h3 class="product-title font-size-sm"><a href="single">Cotton Polo Regular Fit</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-accent">$11.<small>50</small></span>
-                                        <del class="font-size-sm text-muted">$13.<small>50</small></del>
-                                    </div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i><i class="sr-star czi-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body card-body-hidden">
-                                <div class="text-center pb-2">
-                                    <div class="custom-control custom-option custom-control-inline mb-2">
-                                        <input class="custom-control-input" type="radio" name="size6" id="s5">
-                                        <label class="custom-option-label" for="s5">S</label>
-                                    </div>
-                                    <div class="custom-control custom-option custom-control-inline mb-2">
-                                        <input class="custom-control-input" type="radio" name="size6" id="m5">
-                                        <label class="custom-option-label" for="m5">M</label>
-                                    </div>
-                                    <div class="custom-control custom-option custom-control-inline mb-2">
-                                        <input class="custom-control-input" type="radio" name="size6" id="l5" checked>
-                                        <label class="custom-option-label" for="l5">L</label>
-                                    </div>
-                                    <div class="custom-control custom-option custom-control-inline mb-2">
-                                        <input class="custom-control-input" type="radio" name="size6" id="xl5">
-                                        <label class="custom-option-label" for="xl5">XL</label>
-                                    </div>
-                                </div>
-                                <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-
-                            </div>
-                        </div>
-                        <hr class="d-sm-none">
-                    </div>
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/14.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Jeans</a>
-                                <h3 class="product-title font-size-sm"><a href="single">Slim Taper Fit Jeans</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-accent">$58.<small>99</small></span></div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body card-body-hidden">
-                                <div class="text-center pb-2">
-                                    <div class="custom-control custom-option custom-control-inline mb-2">
-                                        <input class="custom-control-input" type="radio" name="size7" id="s6">
-                                        <label class="custom-option-label" for="s6">S</label>
-                                    </div>
-                                    <div class="custom-control custom-option custom-control-inline mb-2">
-                                        <input class="custom-control-input" type="radio" name="size7" id="m6">
-                                        <label class="custom-option-label" for="m6">M</label>
-                                    </div>
-                                    <div class="custom-control custom-option custom-control-inline mb-2">
-                                        <input class="custom-control-input" type="radio" name="size7" id="l6" checked>
-                                        <label class="custom-option-label" for="l6">L</label>
-                                    </div>
-                                    <div class="custom-control custom-option custom-control-inline mb-2">
-                                        <input class="custom-control-input" type="radio" name="size7" id="xl6">
-                                        <label class="custom-option-label" for="xl6">XL</label>
-                                    </div>
-                                </div>
-                                <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-
-                            </div>
-                        </div>
-                        <hr class="d-sm-none">
-                    </div>
-                    <!-- Product-->
-                    <div class="col-md-4 col-sm-6 px-2 mb-4">
-                        <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/15.jpg" alt="Product"></a>
-                            <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Waistcoats</a>
-                                <h3 class="product-title font-size-sm"><a href="single">Single-breasted Trenchcoat</a></h3>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price"><span class="text-accent">$79.<small>99</small></span></div>
-                                    <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-body card-body-hidden">
-                                <div class="text-center pb-2">
-                                    <div class="custom-control custom-option custom-control-inline mb-2">
-                                        <input class="custom-control-input" type="radio" name="size8" id="m7">
-                                        <label class="custom-option-label" for="m7">M</label>
-                                    </div>
-                                    <div class="custom-control custom-option custom-control-inline mb-2">
-                                        <input class="custom-control-input" type="radio" name="size8" id="l7" checked>
-                                        <label class="custom-option-label" for="l7">L</label>
-                                    </div>
-                                    <div class="custom-control custom-option custom-control-inline mb-2">
-                                        <input class="custom-control-input" type="radio" name="size8" id="xl7">
-                                        <label class="custom-option-label" for="xl7">XL</label>
-                                    </div>
-                                </div>
-                                <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-
+                                <button class="btn btn-primary btn-sm mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-                <hr class="my-3">
+                <hr class="pt-3 mt-3">
                 <!-- Pagination-->
                 <nav class="d-flex justify-content-between pt-2" aria-label="Page navigation">
                     <ul class="pagination">
@@ -1154,8 +1037,10 @@
             </section>
         </div>
     </div>
-    <!-- Toast: Added to Cart-->
-    <?= $this->include('include/element/added_toast'); ?>
+
+    <!-- Footer-->
+  <!-- Toast: Added to Cart-->
+  <?= $this->include('include/element/added_toast'); ?>
     <!-- Footer-->
     <?= $this->include('include/element/footer'); ?>
     <!-- Vendor scrits: js libraries and plugins-->

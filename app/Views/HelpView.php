@@ -28,7 +28,7 @@
                         <li><a class="nav-link" href="shop_category">Categories</a></li>
                         <li><a class="nav-link active" href="helpcenter">Help Center</a></li>
                         <li><a class="nav-link" href="about">About us</a></li>
-                        <li><a class="nav-link" href="contacts.html">Contacts</a></li>
+                        <li><a class="nav-link" href="contacts">Contacts</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,42 +57,42 @@
     <section class="container py-3">
         <h2 class="h3 text-center">Select a topic</h2>
         <div class="row pt-4">
-            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="help-single-topic.html">
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="helpsingle">
                     <div class="card-body text-center"><i class="czi-user-circle h2 mt-2 mb-4 text-primary"></i>
                         <h6>Managing account</h6>
                         <p class="font-size-sm text-muted pb-2">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non euismod tempur accusantium.</p>
                         <div class="btn btn-outline-primary btn-sm mb-2">Learn more</div>
                     </div>
                 </a></div>
-            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="help-single-topic.html">
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="helpsingle">
                     <div class="card-body text-center"><i class="czi-laptop h2 mt-2 mb-4 text-primary"></i>
                         <h6>Working with dashboard</h6>
                         <p class="font-size-sm text-muted pb-2">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non euismod tempur accusantium.</p>
                         <div class="btn btn-outline-primary btn-sm mb-2">Learn more</div>
                     </div>
                 </a></div>
-            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="help-single-topic.html">
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="helpsingle">
                     <div class="card-body text-center"><i class="czi-card h2 mt-2 mb-4 text-primary"></i>
                         <h6>Payment options</h6>
                         <p class="font-size-sm text-muted pb-2">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non euismod tempur accusantium.</p>
                         <div class="btn btn-outline-primary btn-sm mb-2">Learn more</div>
                     </div>
                 </a></div>
-            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="help-single-topic.html">
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="helpsingle">
                     <div class="card-body text-center"><i class="czi-delivery h2 mt-2 mb-4 text-primary"></i>
                         <h6>Delivery information</h6>
                         <p class="font-size-sm text-muted pb-2">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non euismod tempur accusantium.</p>
                         <div class="btn btn-outline-primary btn-sm mb-2">Learn more</div>
                     </div>
                 </a></div>
-            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="help-single-topic.html">
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="helpsingle">
                     <div class="card-body text-center"><i class="czi-currency-exchange h2 mt-2 mb-4 text-primary"></i>
                         <h6>Refund policy</h6>
                         <p class="font-size-sm text-muted pb-2">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non euismod tempur accusantium.</p>
                         <div class="btn btn-outline-primary btn-sm mb-2">Learn more</div>
                     </div>
                 </a></div>
-            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="help-single-topic.html">
+            <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card border-0 box-shadow" href="helpsingle">
                     <div class="card-body text-center"><i class="czi-loudspeaker h2 mt-2 mb-4 text-primary"></i>
                         <h6>Affiliate program</h6>
                         <p class="font-size-sm text-muted pb-2">Proin nec turpis vel tortor venenatis tempus. Sed mollis vel arcu in tempor. Mauris enim purus, laoreet nec elit non euismod tempur accusantium.</p>
@@ -127,7 +127,7 @@
     </section>
     <!-- Submit request-->
     <section class="container text-center pt-1 pb-5 mb-2">
-        <h2 class="h4 pb-3">Haven't found the answer? We can help.</h2><i class="czi-help h3 text-primary d-block mb-4"></i><a class="btn btn-primary" href="help-submit-request.html">Submit a request</a>
+        <h2 class="h4 pb-3">Haven't found the answer? We can help.</h2><i class="czi-help h3 text-primary d-block mb-4"></i><a class="btn btn-primary" href="support">Submit a request</a>
         <p class="font-size-sm pt-4">Contact us and we’ll get back to you as soon as possible.</p>
     </section>
     <!-- Footer-->

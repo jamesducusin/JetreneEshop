@@ -15,4 +15,8 @@ class Help extends BaseController
     {
         return view('HelpView');
     }
+    public function helpsingle()
+    {
+        return view('HelpSingleView');
+    }
 }
