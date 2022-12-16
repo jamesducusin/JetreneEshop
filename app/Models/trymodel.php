@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ShopModel extends Model
+class tryModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'shops';
