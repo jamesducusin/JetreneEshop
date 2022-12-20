@@ -18,5 +18,12 @@
     <!-- Vendor Styles including: Font Icons, Plugins, etc.-->
     <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css" />
     <link rel="stylesheet" media="screen" href="vendor/tiny-slider/dist/tiny-slider.css" />
+   
+    
+    <script>
+		window.addEventListener('load', function() {
+			document.getElementById("openmodal").click();
+		})
+	</script>
 
   
