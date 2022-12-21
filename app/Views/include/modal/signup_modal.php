@@ -4,18 +4,38 @@
             <div class="modal-header">
 
                 <ul class="nav nav-tabs card-header-tabs" role="tablist">
-                    <li class="nav-item"><a class="nav-link active" href="#signin-tab" data-toggle="tab" role="tab" aria-selected="true"><i class="czi-unlocked mr-2 mt-n1"></i>Sign in</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#signup-tab" data-toggle="tab" role="tab" aria-selected="false"><i class="czi-user mr-2 mt-n1"></i>Sign up</a></li>
+                    <?php $register = session()->getFlashdata('registermodal');
+                    if (!isset($register)) : ?>
+                        <script>
+                            window.addEventListener('load', function() {
+                                document.getElementById("signin").click();
+                            })
+                        </script>
+                         <li class="nav-item"><a class="nav-link active" id="signin" href="#signin-tab" data-toggle="tab" role="tab" aria-selected="true"><i class="czi-unlocked mr-2 mt-n1"></i>Sign in</a></li>
+                        <li class="nav-item"><a class="nav-link" id="signup" href="#signup-tab" data-toggle="tab" role="tab" aria-selected="false"><i class="czi-user mr-2 mt-n1"></i>Sign up</a></li>
+                    <?php else :; ?>
+                        <script>
+                            window.addEventListener('load', function() {
+                                document.getElementById("signup").click();
+                            })
+                        </script>
+                        <li class="nav-item"><a class="nav-link active" id="signin" href="#signin-tab" data-toggle="tab" role="tab" aria-selected="true"><i class="czi-unlocked mr-2 mt-n1"></i>Sign in</a></li>
+                        <li class="nav-item"><a class="nav-link" id="signup" href="#signup-tab" data-toggle="tab" role="tab" aria-selected="false"><i class="czi-user mr-2 mt-n1"></i>Sign up</a></li>
+                    <?php endif; ?>
                 </ul>
 
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body tab-content py-4">
-                <form action="authLogin" method="post" class="needs-validation tab-pane fade show active" autocomplete="off" novalidate id="signin-tab">
+                <?php if(isset($validation) || !empty(session()->getFlashdata('validation'))) : ?>
+                    <form action="authLogin" method="post" class="was-validated tab-pane fade show active" autocomplete="off" id="signin-tab">
+                <?php else : ?>
+                    <form action="authLogin" method="post" class="needs-validation tab-pane fade show active" autocomplete="off" novalidate id="signin-tab">
+                <?php endif; ?>
                     <div class="form-group">
-                        <label for="si-email">Email address</label>
-                        <input class="form-control" type="email" id="si-email" placeholder="jamesducusin@example.com" name="email" required>
-                        <div class="invalid-feedback">Please provide a valid email address.</div>
+                        <label>Email address</label>
+                        <input class="form-control" type="email" placeholder="jamesducusin@example.com" name="email" required>
+                        <div class="invalid-feedback d-block"><?= isset($validation) && !isset($register) ? display_error($validation, 'email') : '' ?></div>
                     </div>
                     <div class="form-group">
                         <label for="si-password">Password</label>
@@ -25,6 +45,8 @@
                                 <input class="custom-control-input" type="checkbox"><i class="czi-eye password-toggle-indicator"></i><span class="sr-only">Show password</span>
                             </label>
                         </div>
+                        <div class="invalid-feedback d-block"><?= isset($validation) && !isset($register)? display_error($validation, 'password') : '' ?></div>
+                        <div class="invalid-feedback d-block"><?= !empty(session()->getFlashdata('validation'))  && !isset($register) ? session()->getFlashdata('validation') : '' ?></div>
                     </div>
                     <div class="form-group d-flex flex-wrap justify-content-between">
                         <div class="custom-control custom-checkbox mb-2">
@@ -34,12 +56,15 @@
                     </div>
                     <button class="btn btn-primary btn-block btn-shadow" type="submit">Sign in</button>
                 </form>
-                <form action="validateReg" method="post" class="needs-validation tab-pane fade" autocomplete="off" novalidate id="signup-tab">
+                <?php if(isset($validation) || !empty(session()->getFlashdata('validation'))) : ?>
+                    <form action="validateReg" method="post" class="was-validated tab-pane fade" autocomplete="off" id="signup-tab">
+                <?php else : ?>
+                    <form action="validateReg" method="post" class="needs-validation tab-pane fade" autocomplete="off" novalidate id="signup-tab">
+                <?php endif; ?>
                     <div class="form-group">
                         <label for="su-email">Email address</label>
                         <input class="form-control" type="email" id="su-email" placeholder="jamesducusin@example.com" name="email" required>
-                        <div class="invalid-feedback">Please provide a valid email address.</div>
-                        <span><?= isset($validation) ? display_error($validation, 'email'): '' ?></span>
+                        <div class="invalid-feedback d-block"><?= isset($validation) && isset($register) ? display_error($validation, 'email') : '' ?></div>
                     </div>
                     <div class="form-group">
                         <label for="su-password">Password</label>
@@ -49,7 +74,7 @@
                                 <input class="custom-control-input" type="checkbox"><i class="czi-eye password-toggle-indicator"></i><span class="sr-only">Show password</span>
                             </label>
                         </div>
-                        <span><?= isset($validation) ? display_error($validation, 'password'): '' ?></span>
+                         <div class="invalid-feedback d-block"><?= isset($validation) && isset($register)? display_error($validation, 'password') : '' ?></div>
                     </div>
                     <div class="form-group">
                         <label for="su-password-confirm">Confirm password</label>
@@ -59,7 +84,7 @@
                                 <input class="custom-control-input" type="checkbox"><i class="czi-eye password-toggle-indicator"></i><span class="sr-only">Show password</span>
                             </label>
                         </div>
-                        <span><?= isset($validation) ? display_error($validation, 'pass_confirm'): '' ?></span>
+                         <div class="invalid-feedback d-block"><?= isset($validation) && isset($register)? display_error($validation, 'pass_confirm') : '' ?></div>
                     </div>
                     <button class="btn btn-primary btn-block btn-shadow" type="submit">Sign up</button>
                 </form>

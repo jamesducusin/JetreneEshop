@@ -11,7 +11,7 @@ class AuthModel extends Model
 {
     //my variable
     protected $password;
-    
+
 
     protected $DBGroup          = 'default';
     protected $table            = 'users';
@@ -30,25 +30,43 @@ class AuthModel extends Model
     protected $updatedField  = 'updated_at';
 
     // Validation
-    protected $validationRules      = [
-        'email'        => 'required|valid_email|is_unique[users.email]',
-        'password'     => 'required|min_length[8]|regex_match[/(?=[A-Za-z0-9@#$%^&+!=~\*\-_|:.]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=~\*\-_|:.]).*$/  ]',
-        'pass_confirm' => 'required_with[password]|matches[password]',
-    ];
-    protected $skipValidation       = false;
-    protected $cleanValidationRules = true;
+    protected $registerRules      = [
+        'email' =>[
+            'rules'=>'required|valid_email|is_unique[users.email]',
+            'errors'=>[
+                'is_not_unique'=>'This email is not registered in our service.']], 
+        'password' => [
+            'rules' => 'required|min_length[8]|regex_match[/(?=[A-Za-z0-9@#$%^&+!=~\*\-_|:.]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=~\*\-_|:.]).*$/  ]',
+            'errors' =>[ 
+                'regex_match' => 'Passwords too weak, must have atleast<br>✓ 1 uppercase <br>✓ 1 lowercase <br>✓ 1 special character <br>✓ alphanumeric.'
+            ]
+        ],
+        'pass_confirm' => [
+            'rules' =>'required|matches[password]',
+            'errors' =>[
+                'matches' => 'The password confirmation field does not match the password field.'       
+        ]
+    ]
+];
+
+    protected $loginRules      = [           
+    'email' =>[
+        'rules'=>'required|valid_email|is_not_unique[users.email]',
+        'errors'=>[
+            'is_not_unique'=>'This email is not registered in our service.']],
+    'password'     => 'required|min_length[8]'];
+
 
 
     // Callbacks
     protected $allowCallbacks = true;
     protected $beforeInsert    = ['beforeInsert'];
     protected $beforeUpdate   = ['beforeUpdate'];
-    protected $afterFind      = ['afterFind'];
 
     protected function beforeInsert(array $data)
     {
         if (isset($data['data']['password']))
-        $data['data']['password'] = Hash::make($data['data']['password']);
+            $data['data']['password'] = Hash::make($data['data']['password']);
         return $data;
     }
 
@@ -56,13 +74,6 @@ class AuthModel extends Model
     {
         if (isset($data['data']['password']))
             $data['data']['password'] = Hash::make($data['password']);
-        return $data;
-    }
-
-    protected function afterFind(array $data)
-    {
-        if (isset($this->password))
-            $data['data']['password'] = Hash::check($this->password, $data['data']['password']);
         return $data;
     }
 

@@ -8,7 +8,7 @@ class Hash
     }
 
     public static function check($entered_password, $data){
-        if(password_verify($entered_password, $data['password'])){
+        if(password_verify($entered_password, $data)){
             return true;
         }
         else{

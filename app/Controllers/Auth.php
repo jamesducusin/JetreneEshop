@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\AuthModel;
+use App\Libraries\Hash;
 
 class Auth extends BaseController
 {
@@ -26,24 +27,34 @@ class Auth extends BaseController
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
         $authModel = $this->authModel;
+        $authModel->getPassword($password);
+        $validation = $this->validate($this->authModel->loginRules);
 
-        $validation = $this->validate($this->authModel->getValidationRules(['except' => ['pass_confirm']]));
 
         if (!$validation) {
             return view('Homeview',  ['validation' => $this->validator]);
         } else {
             $dbUserInfo = $authModel->where('email', $email)->first();
+            $check_password = Hash::Check($password, $dbUserInfo['password']);
 
-            $user = [
-                'id' => $dbUserInfo['id'],
-                'email' => $email,
-                'password' => $password,
-                'login' => true,
-            ];
-            $this->session->set($user);
+            if(!$check_password){
+                $this->session->setFlashdata('validation', 'Incorrect password!');
+                return view('Homeview');
+            }
+            else{
+                $user = [
+                    'id' => $dbUserInfo['id'],
+                    'email' => $email,
+                    'password' => $password,
+                    'usertype' => 'user',
+                    'login' => true,
+                ];
+                $this->session->set($user);
+                return view('Homeview');
 
-            return view('Homeview');
-            echo "success";
+            }
+
+
         }
     }
     public function logout()
@@ -57,7 +68,7 @@ class Auth extends BaseController
         $password = $this->request->getPost('password');
         $authModel = $this->authModel;
 
-        $validation = $this->validate($this->authModel->validationRules);
+        $validation = $this->validate($this->authModel->registerRules);
 
         $fields = [
             'email' => $email,
@@ -66,11 +77,13 @@ class Auth extends BaseController
         ];
 
         if (!$validation) {
+            $this->session->setFlashdata('registermodal', 'open');
             return view('Homeview',  ['validation' => $this->validator]);
         } else {
-            $authModel->skipValidation(true)->insert($fields);
+            $authModel->insert($fields);
             return view('Homeview');
             echo "success";
         }
     }
+
 }
