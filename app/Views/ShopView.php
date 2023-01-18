@@ -4,8 +4,10 @@
 <head>
     <!-- Meta + Resources-->
     <?= $this->include('include/asset/head'); ?>
+    <!-- Specific Resources-->
     <link rel="stylesheet" media="screen" href="vendor/nouislider/distribute/nouislider.min.css" />
-
+    <link rel="stylesheet" media="screen" href="vendor/drift-zoom/dist/drift-basic.min.css" />
+    
     <!-- Main Theme Styles + Bootstrap-->
     <link rel="stylesheet" media="screen" href="css/theme.min.css">
 </head>
@@ -14,9 +16,6 @@
 <body class="toolbar-enabled">
     <!-- Sign in / sign up modal-->
     <?= $this->include('include/modal/signup_modal'); ?>
-
-    <!-- Quick View Modal-->
-    <?= $this->include('include/modal/quick_modal'); ?>
 
     <!-- navbar -->
     <header class="bg-dark navbar-sticky">
@@ -34,7 +33,7 @@
                         <li><a class="nav-link" href="shop_category">Categories</a></li>
                         <li><a class="nav-link" href="helpcenter">Help Center</a></li>
                         <li><a class="nav-link" href="about">About us</a></li>
-                        <li><a class="nav-link" href="contacts.html">Contacts</a></li>
+                        <li><a class="nav-link" href="contacts">Contacts</a></li>
                     </ul>
                 </div>
             </div>
@@ -48,7 +47,7 @@
             <div class="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb breadcrumb-light flex-lg-nowrap justify-content-center justify-content-lg-start">
-                        <li class="breadcrumb-item"><a class="text-nowrap" href="index.html"><i class="czi-home"></i>Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-nowrap" href="home"><i class="czi-home"></i>Home</a></li>
                         <li class="breadcrumb-item text-nowrap"><a href="#">Shop</a>
                         </li>
                         <li class="breadcrumb-item text-nowrap active" aria-current="page">Grid left sidebar</li>
@@ -619,16 +618,16 @@
                         </div>
                     </div>
                     <div class="d-flex pb-3"><a class="nav-link-style nav-link-light mr-3" href="#"><i class="czi-arrow-left"></i></a><span class="font-size-md text-light">1 / 5</span><a class="nav-link-style nav-link-light ml-3" href="#"><i class="czi-arrow-right"></i></a></div>
-                    <div class="d-none d-sm-flex pb-3"><a class="btn btn-icon nav-link-style bg-light text-dark disabled opacity-100 mr-2" href="#"><i class="czi-view-grid"></i></a><a class="btn btn-icon nav-link-style nav-link-light" href="shop-list-ls.html"><i class="czi-view-list"></i></a></div>
+                    <div class="d-none d-sm-flex pb-3"><a class="btn btn-icon nav-link-style bg-light text-dark disabled opacity-100 mr-2" href="#"><i class="czi-view-grid"></i></a><a class="btn btn-icon nav-link-style nav-link-light" href="shoplist"><i class="czi-view-list"></i></a></div>
                 </div>
                 <!-- Products grid-->
                 <div class="row mx-n2">
                     <!-- Product-->
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/01.jpg" alt="Product"></a>
+                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/01.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Sneakers &amp; Keds</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">Women Colorblock Sneakers</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">Women Colorblock Sneakers</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-accent">$154.<small>00</small></span></div>
                                     <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
@@ -655,7 +654,7 @@
                                     </div>
                                 </div>
                                 <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+
                             </div>
                         </div>
                         <hr class="d-sm-none">
@@ -663,9 +662,9 @@
                     <!-- Product-->
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card"><span class="badge badge-danger badge-shadow">Sale</span>
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/02.jpg" alt="Product"></a>
+                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/02.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Women’s T-shirt</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">Cotton Lace Blouse</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">Cotton Lace Blouse</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-accent">$28.<small>50</small></span>
                                         <del class="font-size-sm text-muted">38.<small>50</small></del>
@@ -703,7 +702,7 @@
                                     </select>
                                     <button class="btn btn-primary btn-sm" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
                                 </div>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+
                             </div>
                         </div>
                         <hr class="d-sm-none">
@@ -712,10 +711,10 @@
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card">
                             <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist">
-                                <i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html">
+                                <i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single">
                                 <img src="img/shop/catalog/03.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Women’s Shorts</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">Mom High Waist Shorts</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">Mom High Waist Shorts</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-accent">$39.<small>50</small></span></div>
                                     <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i>
@@ -742,7 +741,7 @@
                                     </div>
                                 </div>
                                 <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+
                             </div>
                         </div>
                         <hr class="d-sm-none">
@@ -750,9 +749,9 @@
                     <!-- Product-->
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/04.jpg" alt="Product"></a>
+                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/04.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Sportswear</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">Women Sports Jacket</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">Women Sports Jacket</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-accent">$68.<small>40</small></span></div>
                                     <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
@@ -779,7 +778,7 @@
                                     </div>
                                 </div>
                                 <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+
                             </div>
                         </div>
                         <hr class="d-sm-none">
@@ -787,17 +786,17 @@
                     <!-- Product-->
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/05.jpg" alt="Product"></a>
+                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/05.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Sunglasses</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">Polarized Sunglasses</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">Polarized Sunglasses</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-muted font-size-sm">Out of stock</span></div>
                                     <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-body card-body-hidden"><a class="btn btn-secondary btn-sm btn-block mb-2" href="shop-single-v1.html">View details</a>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+                            <div class="card-body card-body-hidden"><a class="btn btn-secondary btn-sm btn-block mb-2" href="single">View details</a>
+
                             </div>
                         </div>
                         <hr class="d-sm-none">
@@ -805,9 +804,9 @@
                     <!-- Product-->
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/06.jpg" alt="Product"></a>
+                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/06.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Backpacks</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">TH Jeans City Backpack</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">TH Jeans City Backpack</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-accent">$79.<small>50</small></span></div>
                                     <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i><i class="sr-star czi-star"></i>
@@ -830,7 +829,7 @@
                                     </div>
                                 </div>
                                 <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+
                             </div>
                         </div>
                     </div>
@@ -849,9 +848,9 @@
                     <!-- Product-->
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/07.jpg" alt="Product"></a>
+                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/07.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Women's Swimwear</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">Two-Piece Bikini in Print</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">Two-Piece Bikini in Print</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-accent">$18.<small>99</small></span></div>
                                     <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
@@ -874,7 +873,7 @@
                                     </div>
                                 </div>
                                 <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+
                             </div>
                         </div>
                         <hr class="d-sm-none">
@@ -882,9 +881,9 @@
                     <!-- Product-->
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/08.jpg" alt="Product"></a>
+                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/08.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Kid's Toys</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">Soft Panda Teddy Bear</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">Soft Panda Teddy Bear</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-accent">$14.<small>99</small></span></div>
                                     <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i>
@@ -893,7 +892,7 @@
                             </div>
                             <div class="card-body card-body-hidden">
                                 <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+
                             </div>
                         </div>
                         <hr class="d-sm-none">
@@ -901,9 +900,9 @@
                     <!-- Product-->
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/09.jpg" alt="Product"></a>
+                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/09.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Cosmetics</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">Metallic Lipstick (Crimson)</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">Metallic Lipstick (Crimson)</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-accent">$12.<small>99</small></span></div>
                                     <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
@@ -926,7 +925,7 @@
                                     </div>
                                 </div>
                                 <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+
                             </div>
                         </div>
                         <hr class="d-sm-none">
@@ -934,9 +933,9 @@
                     <!-- Product-->
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/10.jpg" alt="Product"></a>
+                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/10.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Accessories</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">5-Pack Multicolor Bracelets</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">5-Pack Multicolor Bracelets</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-accent">$7.<small>99</small></span></div>
                                     <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i>
@@ -945,7 +944,7 @@
                             </div>
                             <div class="card-body card-body-hidden">
                                 <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+
                             </div>
                         </div>
                         <hr class="d-sm-none">
@@ -953,9 +952,9 @@
                     <!-- Product-->
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/11.jpg" alt="Product"></a>
+                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/11.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Sandals</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">Soft Footbed Sandals</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">Soft Footbed Sandals</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-accent">$99.<small>50</small></span></div>
                                     <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
@@ -987,7 +986,7 @@
                                     </select>
                                     <button class="btn btn-primary btn-sm" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
                                 </div>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+
                             </div>
                         </div>
                         <hr class="d-sm-none">
@@ -995,9 +994,9 @@
                     <!-- Product-->
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/12.jpg" alt="Product"></a>
+                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/12.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Hats</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">3-Color Sun Stash Hat</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">3-Color Sun Stash Hat</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-accent">$25.<small>99</small></span></div>
                                     <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i>
@@ -1020,7 +1019,7 @@
                                     </div>
                                 </div>
                                 <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+
                             </div>
                         </div>
                         <hr class="d-sm-none">
@@ -1028,9 +1027,9 @@
                     <!-- Product-->
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card"><span class="badge badge-danger badge-shadow">Sale</span>
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/13.jpg" alt="Product"></a>
+                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/13.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s T-shirts</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">Cotton Polo Regular Fit</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">Cotton Polo Regular Fit</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-accent">$11.<small>50</small></span>
                                         <del class="font-size-sm text-muted">$13.<small>50</small></del>
@@ -1059,7 +1058,7 @@
                                     </div>
                                 </div>
                                 <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+
                             </div>
                         </div>
                         <hr class="d-sm-none">
@@ -1067,9 +1066,9 @@
                     <!-- Product-->
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/14.jpg" alt="Product"></a>
+                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/14.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Jeans</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">Slim Taper Fit Jeans</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">Slim Taper Fit Jeans</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-accent">$58.<small>99</small></span></div>
                                     <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
@@ -1096,7 +1095,7 @@
                                     </div>
                                 </div>
                                 <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+
                             </div>
                         </div>
                         <hr class="d-sm-none">
@@ -1104,9 +1103,9 @@
                     <!-- Product-->
                     <div class="col-md-4 col-sm-6 px-2 mb-4">
                         <div class="card product-card">
-                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="shop-single-v1.html"><img src="img/shop/catalog/15.jpg" alt="Product"></a>
+                            <button class="btn-wishlist btn-sm" type="button" data-toggle="tooltip" data-placement="left" title="Add to wishlist"><i class="czi-heart"></i></button><a class="card-img-top d-block overflow-hidden" href="single"><img src="img/shop/catalog/15.jpg" alt="Product"></a>
                             <div class="card-body py-2"><a class="product-meta d-block font-size-xs pb-1" href="#">Men’s Waistcoats</a>
-                                <h3 class="product-title font-size-sm"><a href="shop-single-v1.html">Single-breasted Trenchcoat</a></h3>
+                                <h3 class="product-title font-size-sm"><a href="single">Single-breasted Trenchcoat</a></h3>
                                 <div class="d-flex justify-content-between">
                                     <div class="product-price"><span class="text-accent">$79.<small>99</small></span></div>
                                     <div class="star-rating"><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star-filled active"></i><i class="sr-star czi-star"></i>
@@ -1129,7 +1128,7 @@
                                     </div>
                                 </div>
                                 <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                                <div class="text-center"><a class="nav-link-style font-size-ms" href="#quick-view" data-toggle="modal"><i class="czi-eye align-middle mr-1"></i>Quick view</a></div>
+
                             </div>
                         </div>
                     </div>
@@ -1161,6 +1160,8 @@
     <?= $this->include('include/element/footer'); ?>
     <!-- Vendor scrits: js libraries and plugins-->
     <?= $this->include('include/asset/end'); ?>
+    <script src="vendor/nouislider/distribute/nouislider.min.js"></script>
+    <script src="vendor/drift-zoom/dist/Drift.min.js"></script>
     <!-- Main theme script-->
     <script src="js/theme.min.js"></script>
 </body>

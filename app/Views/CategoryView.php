@@ -30,7 +30,7 @@
                         <li><a class="nav-link active" href="shop_category">Categories</a></li>
                         <li><a class="nav-link" href="helpcenter">Help Center</a></li>
                         <li><a class="nav-link" href="about">About us</a></li>
-                        <li><a class="nav-link" href="contacts.html">Contacts</a></li>
+                        <li><a class="nav-link" href="contacts">Contacts</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,7 +45,7 @@
             <div class="order-lg-2 mb-3 mb-lg-0 pt-lg-2">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb flex-lg-nowrap justify-content-center justify-content-lg-start">
-                        <li class="breadcrumb-item"><a class="text-nowrap" href="index.html"><i class="czi-home"></i>Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-nowrap" href="home"><i class="czi-home"></i>Home</a></li>
                         <li class="breadcrumb-item text-nowrap"><a href="#">Shop</a>
                         </li>
                         <li class="breadcrumb-item text-nowrap active" aria-current="page">Categories</li>
@@ -63,7 +63,7 @@
         <div class="row pt-5">
             <!-- Catogory-->
             <div class="col-md-4 col-sm-6 mb-3">
-                <div class="card border-0"><a class="d-block overflow-hidden rounded-lg" href="shop-grid-ls.html"><img class="d-block w-100" src="img/shop/categories/01.jpg" alt="Clothing"></a>
+                <div class="card border-0"><a class="d-block overflow-hidden rounded-lg" href="shop"><img class="d-block w-100" src="img/shop/categories/01.jpg" alt="Clothing"></a>
                     <div class="card-body">
                         <h2 class="h5">Clothing</h2>
                         <ul class="list-unstyled font-size-sm mb-0">
@@ -84,7 +84,7 @@
             </div>
             <!-- Catogory-->
             <div class="col-md-4 col-sm-6 mb-3">
-                <div class="card border-0"><a class="d-block overflow-hidden rounded-lg" href="shop-grid-ls.html"><img class="d-block w-100" src="img/shop/categories/02.jpg" alt="Shoes"></a>
+                <div class="card border-0"><a class="d-block overflow-hidden rounded-lg" href="shop"><img class="d-block w-100" src="img/shop/categories/02.jpg" alt="Shoes"></a>
                     <div class="card-body">
                         <h2 class="h5">Shoes</h2>
                         <ul class="list-unstyled font-size-sm mb-0">
@@ -105,7 +105,7 @@
             </div>
             <!-- Catogory-->
             <div class="col-md-4 col-sm-6 mb-3">
-                <div class="card border-0"><a class="d-block overflow-hidden rounded-lg" href="shop-grid-ls.html"><img class="d-block w-100" src="img/shop/categories/03.jpg" alt="Gadgets"></a>
+                <div class="card border-0"><a class="d-block overflow-hidden rounded-lg" href="shop"><img class="d-block w-100" src="img/shop/categories/03.jpg" alt="Gadgets"></a>
                     <div class="card-body">
                         <h2 class="h5">Gadgets</h2>
                         <ul class="list-unstyled font-size-sm mb-0">
@@ -126,7 +126,7 @@
             </div>
             <!-- Catogory-->
             <div class="col-md-4 col-sm-6 mb-3">
-                <div class="card border-0"><a class="d-block overflow-hidden rounded-lg" href="shop-grid-ls.html"><img class="d-block w-100" src="img/shop/categories/04.jpg" alt="Furniture"></a>
+                <div class="card border-0"><a class="d-block overflow-hidden rounded-lg" href="shop"><img class="d-block w-100" src="img/shop/categories/04.jpg" alt="Furniture"></a>
                     <div class="card-body">
                         <h2 class="h5">Furniture &amp; Decor</h2>
                         <ul class="list-unstyled font-size-sm mb-0">
@@ -147,7 +147,7 @@
             </div>
             <!-- Catogory-->
             <div class="col-md-4 col-sm-6 mb-3">
-                <div class="card border-0"><a class="d-block overflow-hidden rounded-lg" href="shop-grid-ls.html"><img class="d-block w-100" src="img/shop/categories/05.jpg" alt="Accessories"></a>
+                <div class="card border-0"><a class="d-block overflow-hidden rounded-lg" href="shop"><img class="d-block w-100" src="img/shop/categories/05.jpg" alt="Accessories"></a>
                     <div class="card-body">
                         <h2 class="h5">Accessories</h2>
                         <ul class="list-unstyled font-size-sm mb-0">
@@ -168,7 +168,7 @@
             </div>
             <!-- Catogory-->
             <div class="col-md-4 col-sm-6 mb-3">
-                <div class="card border-0"><a class="d-block overflow-hidden rounded-lg" href="shop-grid-ls.html"><img class="d-block w-100" src="img/shop/categories/06.jpg" alt="Entertainment"></a>
+                <div class="card border-0"><a class="d-block overflow-hidden rounded-lg" href="shop"><img class="d-block w-100" src="img/shop/categories/06.jpg" alt="Entertainment"></a>
                     <div class="card-body">
                         <h2 class="h5">Entertainment</h2>
                         <ul class="list-unstyled font-size-sm mb-0">

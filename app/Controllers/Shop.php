@@ -14,6 +14,10 @@ class Shop extends BaseController
     {
         return view('shopview');
     }
+    public function shoplist()
+    {
+        return view('ShopListView');
+    }
 
     public function shop_category()
     {
