@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class try extends BaseController
+class Shop extends BaseController
 {
     public function index()
     {
@@ -13,6 +13,10 @@ class try extends BaseController
     public function shop()
     {
         return view('shopview');
+    }
+    public function shoplist()
+    {
+        return view('ShopListView');
     }
 
     public function shop_category()
