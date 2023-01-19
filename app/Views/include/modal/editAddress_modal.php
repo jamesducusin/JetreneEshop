@@ -1,8 +1,8 @@
-<form action="<?= site_url('address_insert') ?>" class="needs-validation modal fade" method="post" id="add-address" tabindex="-1" novalidate>
+<form action="<?= site_url('address_update') ?>" class="needs-validation modal fade" method="post" id="edit-address" tabindex="-1" novalidate>
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Add new address</h5>
+                <h5 class="modal-title">Update address</h5>
                 <button class="close"  data-dismiss="modal" type="button" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
@@ -11,67 +11,36 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Full name></label>
-                            <input class="form-control" type="text" name="name"  required>
+                            <input class="form-control nameInput" type="text" id="nameInput" name="name"  required>
                             <div class="invalid-feedback">Please fill in you full name!</div>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Contact</label>
-                            <input class="form-control" type="tel" name="contact" placeholder="09xxxxxxxxx" maxlength="11" pattern="[0-9]{11}" required>
+                            <input class="form-control" type="tel" id="contactInput" name="contact" placeholder="09xxxxxxxxx" maxlength="11" pattern="[0-9]{11}" required>
                             <div class="invalid-feedback">Please fill in a correct format(e.g 09xxxxxxxxx)!</div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>Region</label>
-                            <select  class="custom-select" id="region"></select>
-                            <input class="form-control" type="hidden" id="vregion" name="region" required>
-                            <div class="invalid-feedback">Please fill in your region!</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>Province</label>
-                            <select  class="custom-select" id="province"></select>
-                            <input class="form-control" type="hidden" id="vprovince" name="province"  required>
-                            <div class="invalid-feedback">Please fill in your the province!</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>City/Municipality</label>
-                            <select  class="custom-select" id="city"></select>
-                            <input class="form-control" type="hidden" id="vcity" name="city"  required>
-                            <div class="invalid-feedback">Please fill in your municipality!</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label>Barangay</label>
-                            <select  class="custom-select" id="barangay"></select>
-                            <input class="form-control" type="hidden" id="vbarangay" name="barangay"  required>
-                            <div class="invalid-feedback">Please fill in your barangay</div>
-                        </div>
-                    </div>
+                   
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Street</label>
-                            <input class="form-control" type="text" name="street" required>
+                            <input class="form-control" type="text" id="contactInput" name="street" required>
                             <div class="invalid-feedback">Please fill in your street</div>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Zip code</label>
-                            <input class="form-control" type="number" maxlength="5" name="postalcode" required>
+                            <input class="form-control" type="number" maxlength="5" id="postalcodeInput" name="postalcode" required>
                             <div class="invalid-feedback">Please fill in your zip code!</div>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Label as</label>
-                            <select class="custom-select" name="label_as" required>
+                            <select class="custom-select" id="labelInput" name="label_as" required>
                                 <option value>select...</option>
                                 <option value="Home">Home</option>
                                 <option value="Work">Work</option>

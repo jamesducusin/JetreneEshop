@@ -1,10 +1,7 @@
 <?php
 
-
 namespace App\Models;
-
 use App\Libraries\Hash;
-
 use CodeIgniter\Model;
 
 class AuthModel extends Model
@@ -33,52 +30,31 @@ class AuthModel extends Model
     protected $registerRules      = [
         'email' =>[
             'rules'=>'required|valid_email|is_unique[users.email]',
-            'errors'=>[
-                'is_not_unique'=>'This email is not registered in our service.']], 
+            'errors'=>['is_not_unique'=>'This email is not registered in our service.']], 
         'password' => [
             'rules' => 'required|min_length[8]|regex_match[/(?=[A-Za-z0-9@#$%^&+!=~\*\-_|:.]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=~\*\-_|:.]).*$/  ]',
-            'errors' =>[ 
-                'regex_match' => 'Passwords too weak, must have atleast<br>✓ 1 uppercase <br>✓ 1 lowercase <br>✓ 1 special character <br>✓ alphanumeric.'
-            ]
-        ],
+            'errors' =>['regex_match' => 'Passwords too weak, must have atleast<br>✓ 1 uppercase <br>✓ 1 lowercase <br>✓ 1 special character <br>✓ alphanumeric.']],
         'pass_confirm' => [
             'rules' =>'required|matches[password]',
-            'errors' =>[
-                'matches' => 'The password confirmation field does not match the password field.'       
-        ]
-    ]
-];
+            'errors' =>['matches' => 'The password confirmation field does not match the password field.']]];
 
     protected $loginRules      = [           
     'email' =>[
         'rules'=>'required|valid_email|is_not_unique[users.email]',
-        'errors'=>[
-            'is_not_unique'=>'This email is not registered in our service.']],
-    'password'     => 'required|min_length[8]'];
-
-
+        'errors'=>['is_not_unique'=>'This email is not registered in our service.']],
+    'password'=> 'required|min_length[8]'];
 
     // Callbacks
     protected $allowCallbacks = true;
-    protected $beforeInsert    = ['beforeInsert'];
-    protected $beforeUpdate   = ['beforeUpdate'];
+    protected $beforeInsert    = ['hashPassword'];
+    protected $beforeUpdate   = ['hashPassword'];
 
-    protected function beforeInsert(array $data)
+    protected function hashPassword(array $data)
     {
-        if (isset($data['data']['password']))
-            $data['data']['password'] = Hash::make($data['data']['password']);
+        if (! isset($data['data']['password'])) {
+            return $data;
+        }
+        $data['data']['password'] = Hash::make($data['data']['password']);
         return $data;
-    }
-
-    protected function beforeUpdate(array $data)
-    {
-        if (isset($data['data']['password']))
-            $data['data']['password'] = Hash::make($data['password']);
-        return $data;
-    }
-
-    public function getPassword($password)
-    {
-        return $this->$password = $password;
     }
 }

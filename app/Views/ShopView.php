@@ -1154,8 +1154,7 @@
             </section>
         </div>
     </div>
-    <!-- Toast: Added to Cart-->
-    <?= $this->include('include/element/added_toast'); ?>
+
     <!-- Footer-->
     <?= $this->include('include/element/footer'); ?>
     <!-- Vendor scrits: js libraries and plugins-->

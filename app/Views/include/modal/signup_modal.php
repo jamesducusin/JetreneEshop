@@ -27,7 +27,7 @@
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body tab-content py-4">
-                <?php if(isset($validation) || !empty(session()->getFlashdata('validation'))) : ?>
+                <?php if(isset($validation) && !isset($register) || !empty(session()->getFlashdata('validation'))) : ?>
                     <form action="authLogin" method="post" class="was-validated tab-pane fade show active" autocomplete="off" id="signin-tab">
                 <?php else : ?>
                     <form action="authLogin" method="post" class="needs-validation tab-pane fade show active" autocomplete="off" novalidate id="signin-tab">
@@ -56,7 +56,7 @@
                     </div>
                     <button class="btn btn-primary btn-block btn-shadow" type="submit">Sign in</button>
                 </form>
-                <?php if(isset($validation) || !empty(session()->getFlashdata('validation'))) : ?>
+                <?php if(isset($validation) && isset($register)) : ?>
                     <form action="validateReg" method="post" class="was-validated tab-pane fade" autocomplete="off" id="signup-tab">
                 <?php else : ?>
                     <form action="validateReg" method="post" class="needs-validation tab-pane fade" autocomplete="off" novalidate id="signup-tab">

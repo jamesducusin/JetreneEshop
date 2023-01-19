@@ -83,7 +83,6 @@
                     <ul class="list-unstyled mb-0">
                         <li class="border-bottom mb-0"><a class="nav-link-style d-flex align-items-center px-4 py-3" href="profile"><i class="czi-user opacity-60 mr-2"></i>Profile info</a></li>
                         <li class="border-bottom mb-0"><a class="nav-link-style d-flex align-items-center px-4 py-3" href="address"><i class="czi-location opacity-60 mr-2"></i>Addresses</a></li>
-                        <li class="d-lg-none border-top mb-0"><a class="nav-link-style d-flex align-items-center px-4 py-3" href="account-signin.html"><i class="czi-sign-out opacity-60 mr-2"></i>Sign out</a></li>
                     </ul>
                 </div>
             </aside>
@@ -110,7 +109,7 @@
                         <div class="font-size-ms px-3">
                             <div class="font-weight-medium">Status</div><span class="badge badge-success">Open</span>
                         </div>
-                    </div><a class="btn btn-primary btn-sm" href="account-signin.html"><i class="czi-sign-out mr-3"></i>Sign out</a>
+                    </div><a class="btn btn-primary btn-sm" href="logout"><i class="czi-sign-out mr-3"></i>Sign out</a>
                 </div>
                 <!-- Ticket details (visible on mobile)-->
                 <div class="d-flex d-lg-none flex-wrap bg-secondary text-center rounded-lg pt-4 px-4 pb-1 mb-4">

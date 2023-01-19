@@ -25,7 +25,6 @@ class Address extends BaseController
         $id = $this->session->get('id');
         $data = [
             'address' => $this->userAddressModel->get_address($id),
-            'pass_modal' => $this->userAddressModel->pass_modal($address_id),
         ];
         if (!isset($address_id)) {
             return view('UserDash/AddressView', $data);
@@ -34,7 +33,11 @@ class Address extends BaseController
             return view('UserDash/AddressView', $data);
         }
     }
-    public function address_update($id = null)
+    public function address_edit($address_id)
+    {
+        
+    }
+    public function address_update()
     {
     }
     public function address_delete($id)
@@ -68,8 +71,13 @@ class Address extends BaseController
             'is_default' => $is_default,
         ];
         if($this->userAddressModel->is_unique($userAddress)) {
+            if($this->userAddressModel->unique_default($userAddress)) 
+                $this->session->setFlashdata('success', 'Address was added successfuly'); 
+            else
+                $this->session->setFlashdata('success', 'Address was added successfuly and set as default address'); 
+            
             $this->userAddressModel->insert($userAddress);
-            $this->session->setFlashdata('success', 'Address was added successfuly');
+            
         }
         else
             $this->session->setFlashdata('failed', 'Address failed to save! Duplicate address');

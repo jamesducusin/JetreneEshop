@@ -27,7 +27,6 @@ class Auth extends BaseController
         $email = $this->request->getPost('email');
         $password = $this->request->getPost('password');
         $authModel = $this->authModel;
-        $authModel->getPassword($password);
         $validation = $this->validate($this->authModel->loginRules);
 
 
@@ -59,7 +58,8 @@ class Auth extends BaseController
     }
     public function logout()
     {
-        $this->session->destroy();
+        $this->session->setFlashdata('logout', true);
+        $this->session->remove('login');
         return view('Homeview');
     }
     public function validateReg()

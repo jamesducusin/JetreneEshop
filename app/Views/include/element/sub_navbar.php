@@ -1,16 +1,25 @@
 <div class="navbar-toolbar d-flex align-items-center order-lg-3">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button><a class="navbar-tool d-none d-lg-flex" href="#searchBox" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="searchBox"><span class="navbar-tool-tooltip">Search</span>
         <div class="navbar-tool-icon-box"><i class="navbar-tool-icon czi-search"></i></div>
-    </a><a class="navbar-tool ml-1 mr-n1" href="tracking"><span class="navbar-tool-tooltip">Tracking</span>
-        <div class="navbar-tool-icon-box"><i class="navbar-tool-icon czi-location"></i></div>
-    </a><a class="navbar-tool d-none d-lg-flex" href="orders"><span class="navbar-tool-tooltip">Dashboard</span>
-        <div class="navbar-tool-icon-box"><i class="navbar-tool-icon czi-menu"></i></div>
     </a>
-    <?php if (!session()->get('login')) : ?>
+    <?php if (session()->get('login') && !session()->getFlashdata('logout')) : ?>
+        <a class="navbar-tool ml-1 mr-n1" href="tracking"><span class="navbar-tool-tooltip">Tracking</span>
+        <div class="navbar-tool-icon-box"><i class="navbar-tool-icon czi-location"></i></div>
+    </a>
+    <?php endif; ?>
+    <?php if (session()->get('login') && !session()->getFlashdata('logout')) : ?>
+        <a class="navbar-tool d-none d-lg-flex" href="orders"><span class="navbar-tool-tooltip">Dashboard</span>
+            <div class="navbar-tool-icon-box"><i class="navbar-tool-icon czi-user-circle"></i></div>
+        </a>
+    <?php else : ?>
         <a class="navbar-tool ml-1 mr-n1" id="openmodal" href="#signin-modal" data-toggle="modal"><span class="navbar-tool-tooltip">Account</span>
             <div class="navbar-tool-icon-box"><i class="navbar-tool-icon czi-user"></i></div>
         <?php endif; ?>
-        <div class="navbar-tool dropdown ml-3"><a class="navbar-tool-icon-box bg-secondary dropdown-toggle" href="cart"><span class="navbar-tool-label">4</span><i class="navbar-tool-icon czi-cart"></i></a>
+        <?php if (session()->get('login') && !session()->getFlashdata('logout')) : ?>
+            <div class="navbar-tool dropdown ml-3"><a class="navbar-tool-icon-box bg-secondary dropdown-toggle" href="cart"><span class="navbar-tool-label">4</span><i class="navbar-tool-icon czi-cart"></i></a>
+        <?php else : ?>
+            <div class="navbar-tool dropdown ml-3"><a class="navbar-tool-icon-box bg-secondary dropdown-toggle" href="#"><span class="navbar-tool-label">4</span><i class="navbar-tool-icon czi-cart"></i></a>    
+        <?php endif; ?>    
             <!-- Cart dropdown-->
             <div class="dropdown-menu dropdown-menu-right" style="width: 20rem;">
                 <div class="widget widget-cart px-3 pt-2 pb-3">
@@ -58,9 +67,4 @@
                 </div>
             </div>
         </div>
-        <?php if (session()->get('login')) : ?>
-            <a class="navbar-tool ml-1 mr-n1" href="logout"><span class="navbar-tool-tooltip"><?= session()->get('email'); ?></span>
-                <div class="navbar-tool-icon-box"><i class="navbar-tool-icon czi-user-circle"></i></div>
-            <?php endif; ?>
-            </a>
 </div>

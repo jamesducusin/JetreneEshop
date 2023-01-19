@@ -10,6 +10,7 @@ class Home extends BaseController
     }
     public function home()
     {
+        session()->setFlashdata('home', true);
         return view('homeview');
     }
     public function about()

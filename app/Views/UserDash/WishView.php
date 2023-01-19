@@ -85,7 +85,6 @@
                     <ul class="list-unstyled mb-0">
                         <li class="border-bottom mb-0"><a class="nav-link-style d-flex align-items-center px-4 py-3" href="profile"><i class="czi-user opacity-60 mr-2"></i>Profile info</a></li>
                         <li class="border-bottom mb-0"><a class="nav-link-style d-flex align-items-center px-4 py-3" href="address"><i class="czi-location opacity-60 mr-2"></i>Addresses</a></li>
-                        <li class="d-lg-none border-top mb-0"><a class="nav-link-style d-flex align-items-center px-4 py-3" href="account-signin.html"><i class="czi-sign-out opacity-60 mr-2"></i>Sign out</a></li>
                     </ul>
                 </div>
             </aside>
@@ -93,7 +92,7 @@
             <section class="col-lg-8">
                 <!-- Toolbar-->
                 <div class="d-none d-lg-flex justify-content-between align-items-center pt-lg-3 pb-4 pb-lg-5 mb-lg-3">
-                    <h6 class="font-size-base text-light mb-0">List of items you added to wishlist:</h6><a class="btn btn-primary btn-sm" href="account-signin.html"><i class="czi-sign-out mr-2"></i>Sign out</a>
+                    <h6 class="font-size-base text-light mb-0">List of items you added to wishlist:</h6><a class="btn btn-primary btn-sm" href="logout"><i class="czi-sign-out mr-2"></i>Sign out</a>
                 </div>
                 <!-- Wishlist-->
                 <!-- Item-->
