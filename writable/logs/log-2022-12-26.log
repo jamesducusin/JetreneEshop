@@ -1,0 +1,47 @@
+CRITICAL - 2022-12-26 04:23:00 --> Cannot redeclare ActionModal() (previously declared in C:\wamp64\www\JetreneEshop\app\Helpers\Form_helper.php:19)
+in APPPATH\Helpers\Modal_helper.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-26 04:23:01 --> Cannot redeclare ActionModal() (previously declared in C:\wamp64\www\JetreneEshop\app\Helpers\Form_helper.php:19)
+in APPPATH\Helpers\Modal_helper.php on line 2.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-26 04:23:41 --> Invalid file: include/element/added_toast.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('include/element/added_toast.php')
+ 2 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('include/element/added_toast', null, true)
+ 3 APPPATH\Views\HomeView.php(616): CodeIgniter\View\View->include('include/element/added_toast')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\HomeView.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Homeview', [], true)
+ 7 APPPATH\Controllers\Auth.php(52): view('Homeview')
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->authLogin()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 05:03:53 --> Undefined array key 0
+in APPPATH\Controllers\Address.php on line 65.
+ 1 APPPATH\Controllers\Address.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Address.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Address->address_insert()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Address))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 05:09:01 --> Undefined array key 0
+in APPPATH\Controllers\Address.php on line 65.
+ 1 APPPATH\Controllers\Address.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Address.php', 65)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Address->address_insert()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Address))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-26 05:28:03 --> Call to undefined function ActionModal()
+in APPPATH\Views\UserDash\AddressView.php on line 112.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('UserDash/AddressView', [], true)
+ 4 APPPATH\Controllers\Address.php(31): view('UserDash/AddressView', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Address->address_retrieve()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Address))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

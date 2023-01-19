@@ -62,16 +62,15 @@ $routes->get('/cart', 'Cart::cart');
 //Checkout
 $routes->get('/tracking', 'Checkout::tracking');
 
-//User Dashboard
-$routes->get('/orders', 'UserDash::orders');
-$routes->get('/wishlist', 'UserDash::wishlist');
-$routes->get('/support', 'UserDash::support');
-$routes->get('/single', 'UserDash::single');
-$routes->get('/singlesupport', 'UserDash::singlesupport');
-$routes->get('/profile', 'UserDash::profile');
-$routes->get('/address', 'UserDash::address');
-$routes->get('/payment', 'UserDash::payment');
-$routes->get('/signin', 'UserDash::signin');
+//Address
+$routes->get('/address_retrieve', 'Address::address_retrieve');
+$routes->post('/address_update', 'Address::address_update');
+$routes->post('/address_edit/(:any)', 'Address::address_edit/$1s');
+$routes->delete('/address_delete/(:any)', 'Address::address_delete/$1');
+$routes->post('/address_insert', 'Address::address_insert');
+
+// $routes->match(['get', 'put'], 'address_update/(:any)', 'Address::address_update/$1');
+// $routes->match(['get', 'delete'], 'address_update/(:any)', 'Address::address_update/$1');
 
 
 

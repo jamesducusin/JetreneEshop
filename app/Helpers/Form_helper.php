@@ -7,3 +7,13 @@ function display_error($validation, $field)
         return false;
     }
 }
+
+function login()
+{
+    if (session()->get('login') && !session()->getFlashdata('logout'))
+        return true;
+    else
+        return false;
+}
+
+?>
