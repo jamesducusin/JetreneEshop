@@ -90,7 +90,7 @@
                         <h3 class="font-size-sm mb-0 text-muted">Account settings</h3>
                     </div>
                     <ul class="list-unstyled mb-0">
-                        <li class="border-bottom mb-0"><a class="nav-link-style d-flex align-items-center px-4 py-3" href="<?= base_url() ?>/profile"><i class="czi-user opacity-60 mr-2"></i>Profile info</a></li>
+                        <li class="border-bottom mb-0"><a class="nav-link-style d-flex align-items-center px-4 py-3" href="<?= base_url() ?>/profile_retrieve"><i class="czi-user opacity-60 mr-2"></i>Profile info</a></li>
                         <li class="border-bottom mb-0"><a class="nav-link-style d-flex align-items-center px-4 py-3 active" href="<?= base_url() ?>/address"><i class="czi-location opacity-60 mr-2"></i>Addresses</a></li>
                     </ul>
                 </div>

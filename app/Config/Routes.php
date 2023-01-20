@@ -71,7 +71,7 @@ $routes->post('/address_delete', 'Address::address_delete');
 $routes->post('/address_insert', 'Address::address_insert');
 
 //Orders
-$routes->get('/address_insert', 'Address::address_insert');
+$routes->get('/profile_retrieve', 'Profile::profile_retrieve');
 
 // $routes->match(['get', 'put'], 'address_update/(:any)', 'Address::address_update/$1');
 // $routes->match(['get', 'delete'], 'address_update/(:any)', 'Address::address_update/$1');
