@@ -119,6 +119,7 @@
                     <table class="table table-hover mb-0">
                         <thead>
                             <tr>
+                                <th></th>
                                 <th>Contact info</th>
                                 <th>Address</th>
                                 <th>Actions</th>
@@ -127,17 +128,14 @@
                         <tbody>
                             <?php foreach ($address as $user_address) : ?>
                                 <tr>
-                                    <td class="py-3 align-middle"><?= $user_address['info'] ?></td>
-                                    <td class="py-3 align-middle"><?= $user_address['address'] ?><span class="align-middle badge badge-info ml-2"><?= $user_address['label_as'] ?></span>
+                                    <td ><input type="radio" name="default" id="dafaultInput" data-id="<?= $user_address['id'] ?>" <?php if($user_address['is_default'] == 1) {echo 'checked';} ?>></td>
+                                    <td class="py-3 id-middle"><?= $user_address['info'] ?></td>
+                                    <td class="py-3 align-middle"><?= $user_address['address'] ?><span class="align-middle badge badge-<?php if($user_address['label_as'] == 'Home'){echo 'info';} else{echo 'warning';} ?> ml-2"><?= $user_address['label_as'] ?></span>
                                         <span class="align-middle badge badge-success ml-2"><?php if ($user_address['is_default'] != 0) : echo "default address";
                                                                                             endif; ?></span>
                                     </td>
-                                    <td data-name="james"></td>
-                                    <td style="display:none"><span id='contact<?= $user_address['id'] ?>'><?= $user_address['contact'] ?></span></td>
-                                    <td style="display:none"><span id='street<?= $user_address['id'] ?>'><?= $user_address['street'] ?></span></td>
-                                    <td style="display:none"><span id='postalcode<?= $user_address['id'] ?>'><?= $user_address['postalcode'] ?></span></td>
-                                    <td class="py-3 align-middle"><button data-toggle="modal" data-target="#edit-address">
-                                            <i class="czi-edit"></i></button><a class="nav-link-style text-danger" href="#delete-modal" data-toggle="modal" data-name="<?= $user_address['name'] ?>">
+                                    <td class="py-3 align-middle" data-id="<?= $user_address['id'] ?>" data-default="<?= $user_address['is_default'] ?>" data-name="<?= $user_address['name'] ?>" data-label_as="<?= $user_address['label_as'] ?>" data-street="<?= $user_address['street'] ?>" data-contact="<?= $user_address['contact'] ?>" data-postalcode="<?= $user_address['postalcode'] ?>"><a class="nav-link-style" href="#" data-toggle="modal" data-target="#editAddress">
+                                            <i class="czi-edit"></i></a><a class="nav-link-style text-danger" href="#" data-toggle="modal" data-target="#deleteAddress">
                                             <div class="czi-trash"></div>
                                         </a>
                                     </td>
@@ -167,24 +165,11 @@
     <?= $this->include('include/asset/end'); ?>
     <!-- Main theme script-->
     <script src="<?= base_url() ?>/js/theme.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="https://f001.backblazeb2.com/file/buonzz-assets/jquery.ph-locations.js"></script>
     <script src="<?= base_url() ?>/js/address.js"></script>
-
-
-    <script>
-        $('#edit-address').on('show.bs.modal', function(event) {
-            var button = $(event.relatedTarget) // Button that triggered the modal
-            var name = button.closest('td').data('name')
-            var modal = $(this)
-            modal.find('#nameInput').text(name)
-
-        })
-    </script>
-
-
-
 
 
 </body>

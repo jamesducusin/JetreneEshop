@@ -21,4 +21,8 @@ class Home extends BaseController
     {
         return view('Contactview');
     }
+    public function try()
+    {
+        return view('try');
+    }
 }

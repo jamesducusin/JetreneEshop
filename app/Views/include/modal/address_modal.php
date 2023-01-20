@@ -10,7 +10,7 @@
                   
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label>Full name></label>
+                            <label>Full name</label>
                             <input class="form-control" type="text" name="name"  required>
                             <div class="invalid-feedback">Please fill in you full name!</div>
                         </div>
@@ -25,7 +25,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Region</label>
-                            <select  class="custom-select" id="region"></select>
+                            <select  class="custom-select" id="region" required></select>
                             <input class="form-control" type="hidden" id="vregion" name="region" required>
                             <div class="invalid-feedback">Please fill in your region!</div>
                         </div>
@@ -33,7 +33,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Province</label>
-                            <select  class="custom-select" id="province"></select>
+                            <select  class="custom-select" id="province" required></select>
                             <input class="form-control" type="hidden" id="vprovince" name="province"  required>
                             <div class="invalid-feedback">Please fill in your the province!</div>
                         </div>
@@ -41,7 +41,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>City/Municipality</label>
-                            <select  class="custom-select" id="city"></select>
+                            <select  class="custom-select" id="city" required></select>
                             <input class="form-control" type="hidden" id="vcity" name="city"  required>
                             <div class="invalid-feedback">Please fill in your municipality!</div>
                         </div>
@@ -49,7 +49,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Barangay</label>
-                            <select  class="custom-select" id="barangay"></select>
+                            <select  class="custom-select" id="barangay" required></select>
                             <input class="form-control" type="hidden" id="vbarangay" name="barangay"  required>
                             <div class="invalid-feedback">Please fill in your barangay</div>
                         </div>
@@ -88,7 +88,7 @@
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary"  data-dismiss="modal" type="button">Close</button>
-                <button class="btn btn-primary btn-shadow" type="submit">Add new address</button>
+                <button class="btn btn-primary btn-shadow" type="submit">Save</button>
             </div>
         </div>
     </div>

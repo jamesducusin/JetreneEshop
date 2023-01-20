@@ -14,7 +14,7 @@ class AddressModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['street','barangay', 'city', 'province', 'postalcode'];
+    protected $allowedFields    = ['barangay', 'city', 'province'];
 
     // Validation
     protected $validationRules      = [];

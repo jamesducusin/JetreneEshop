@@ -1,0 +1,63 @@
+CRITICAL - 2023-01-19 19:40:56 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1598.
+ 1 SYSTEMPATH\BaseModel.php(1598): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\UserAddressModel.php(84): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Address.php(60): App\Models\UserAddressModel->update_address([...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Address->address_update()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Address))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-19 19:47:33 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1598.
+ 1 SYSTEMPATH\BaseModel.php(1598): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Models\UserAddressModel.php(84): CodeIgniter\Model->update([...])
+ 5 APPPATH\Controllers\Address.php(60): App\Models\UserAddressModel->update_address([...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Address->address_update()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Address))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-19 20:12:13 --> Undefined array key "street"
+in APPPATH\Models\UserAddressModel.php on line 54.
+ 1 APPPATH\Models\UserAddressModel.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "street"', 'APPPATH\\Models\\UserAddressModel.php', 54)
+ 2 APPPATH\Controllers\Address.php(80): App\Models\UserAddressModel->is_uniqueInsert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Address->address_insert()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Address))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-19 21:45:49 --> Trying to access array offset on value of type null
+in SYSTEMPATH\BaseModel.php on line 749.
+ 1 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'SYSTEMPATH\\BaseModel.php', 749)
+ 2 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 3 APPPATH\Controllers\Address.php(108): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Address->address_insert()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Address))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-19 21:47:11 --> Trying to access array offset on value of type null
+in SYSTEMPATH\BaseModel.php on line 749.
+ 1 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'SYSTEMPATH\\BaseModel.php', 749)
+ 2 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 3 APPPATH\Controllers\Address.php(108): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Address->address_insert()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Address))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-19 21:48:57 --> Trying to access array offset on value of type null
+in SYSTEMPATH\BaseModel.php on line 749.
+ 1 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'SYSTEMPATH\\BaseModel.php', 749)
+ 2 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 3 APPPATH\Controllers\Address.php(108): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Address->address_insert()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Address))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

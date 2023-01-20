@@ -73,5 +73,37 @@ $(function () {
     $('#region').ph_locations('fetch_list');
 });
 
+$('#editAddress').on('show.bs.modal', function(event) {
+    var link = $(event.relatedTarget) // Button that triggered the modal
+    var name = link.closest('td').data('name');
+    var contact = link.closest('td').data('contact');
+    var street = link.closest('td').data('street');
+    var postalcode = link.closest('td').data('postalcode');
+    var label_as = link.closest('td').data('label_as');
+    var is_default = link.closest('td').data('default');
+    var id = link.closest('td').data('id');
+    var modal = $(this)
+    modal.find('#nameInput').val(name)
+    modal.find('#contactInput').val(contact)
+    modal.find('#streetInput').val(street)
+    modal.find('#postalcodeInput').val(postalcode)
+    modal.find('#labelInput').val(label_as)
+    modal.find('#idHidden').val(id)
+
+    
+})
+
+$('table input[type="radio"]').on('click', function() {
+    var id = this.dataset.id;
+    window.location.href = 'setDefault/' + id;
+});
+
+$('#deleteAddress').on('show.bs.modal', function(event) {
+    var link = $(event.relatedTarget) // Button that triggered the modal
+    var id = link.closest('td').data('id');
+    var modal = $(this)
+    modal.find('#deleteid').val(id)
+    
+});
 
 

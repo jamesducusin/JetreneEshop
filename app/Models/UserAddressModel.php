@@ -14,7 +14,7 @@ class UserAddressModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['name', 'contact', 'user_id', 'address_id', 'label_as', 'is_default'];
+    protected $allowedFields    = ['name', 'contact', 'user_id', 'address_id', 'street', 'postalcode', 'label_as', 'is_default'];
 
 
     // Validation
@@ -30,7 +30,7 @@ class UserAddressModel extends Model
 
     // Callbacks
     protected $allowCallbacks = true;
-    protected $beforeInsert   = [];
+    protected $beforeInsert   = ['firstAddress'];
     protected $afterInsert    = [];
     protected $beforeUpdate   = [];
     protected $afterUpdate    = [];
@@ -38,6 +38,15 @@ class UserAddressModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+    protected function firstAddress(array $data)
+    {
+        $addressCount = $this->where('user_id', $data['data']['user_id'])->countAllResults();
+        if($addressCount < 1) {
+            $data['data']['is_default'] = 1;
+        } 
+        return $data;
+    }
 
     public function get_address($id)
     {
@@ -51,7 +60,6 @@ class UserAddressModel extends Model
     {
         $addressModel = new \App\Models\AddressModel();
         $testData = [
-            'street' => $data['street'],
             'barangay' => $data['barangay'],
             'city' => $data['city'],
             'province' => $data['province'],
@@ -79,20 +87,61 @@ class UserAddressModel extends Model
         }
     }
 
+    public function update_address($data)
+    {
+        $toUpdate = [
+            'name' => $data['name'],
+            'contact' => $data['contact'],
+            'street' => $data['street'],
+            'postalcode' => $data['postalcode'],
+            'label_as' => $data['label_as'],
+  
+        ];
+        $id = [
+            'user_id' => $data['user_id'],
+            'address_id' => $data['address_id'],
+        ];
+
+        return $this->set($toUpdate)->where($id)->update();
+    }
+
+    public function makeDefault($data)
+    {
+        $id = [
+            'user_id' => $data['user_id'],
+            'address_id' => $data['address_id'],
+        ];
+        $default = [
+            'is_default' => 1,
+            'user_id' => $data['user_id'],
+        ];
+        $this->set('is_default', '0')->where($default)->update();
+        if($this->set('is_default', '1')->where($id)->update()) {
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+
     public function unique_default($data)
     {
         $default = [
-            'is_default' => $data['is_default'],
-            'user_id' => 1,
+            'is_default' => 1,
+            'user_id' => $data['user_id'],
         ];
 
-        $defaultCount = $this->where($default)->countAllResults();
-        if($defaultCount > 0) {
-            $this->set('is_default', '0')->where($default)->update();
-            return false;
+        $defaultCount = 0;
+        if($data['is_default'] == 1) {
+            $defaultCount = $this->where($default)->countAllResults();
+        }
+        if($defaultCount < 1) {
+            return true;
         }
         else{
-            return true;
+            $this->set('is_default', '0')->where($default)->update();
+            return false;
         }
     }
 }

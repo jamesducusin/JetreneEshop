@@ -1,4 +1,4 @@
-<form action="<?= site_url('address_update') ?>" class="needs-validation modal fade" method="post" id="edit-address" tabindex="-1" novalidate>
+<form action="<?= site_url('address_update') ?>" class="needs-validation modal fade" method="post" id="editAddress" tabindex="-1" novalidate>
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -7,10 +7,10 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                  
+                <input  type="hidden" id="idHidden" name="id">
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label>Full name></label>
+                            <label>Full name</label>
                             <input class="form-control nameInput" type="text" id="nameInput" name="name"  required>
                             <div class="invalid-feedback">Please fill in you full name!</div>
                         </div>
@@ -26,7 +26,7 @@
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label>Street</label>
-                            <input class="form-control" type="text" id="contactInput" name="street" required>
+                            <input class="form-control" type="text" id="streetInput" name="street" required>
                             <div class="invalid-feedback">Please fill in your street</div>
                         </div>
                     </div>
@@ -47,17 +47,12 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="address-primary" name="default">
-                            <label class="custom-control-label" for="address-primary">Make this default address.</label>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
             <div class="modal-footer">
                 <button class="btn btn-secondary"  data-dismiss="modal" type="button">Close</button>
-                <button class="btn btn-primary btn-shadow" type="submit">Add new address</button>
+                <button class="btn btn-primary btn-shadow" type="submit">Save</button>
             </div>
         </div>
     </div>

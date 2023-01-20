@@ -46,6 +46,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/home', 'Home::home');
 $routes->get('/about', 'Home::about');
 $routes->get('/contacts', 'Home::contacts');
+$routes->get('/try', 'Home::try');
 
 //Shop
 $routes->get('/shop', 'Shop::shop');
@@ -64,10 +65,13 @@ $routes->get('/tracking', 'Checkout::tracking');
 
 //Address
 $routes->get('/address_retrieve', 'Address::address_retrieve');
+$routes->get('/setDefault/(:any)', 'Address::setDefault/$1');
 $routes->post('/address_update', 'Address::address_update');
-$routes->post('/address_edit/(:any)', 'Address::address_edit/$1s');
-$routes->delete('/address_delete/(:any)', 'Address::address_delete/$1');
+$routes->post('/address_delete', 'Address::address_delete');
 $routes->post('/address_insert', 'Address::address_insert');
+
+//Orders
+$routes->get('/address_insert', 'Address::address_insert');
 
 // $routes->match(['get', 'put'], 'address_update/(:any)', 'Address::address_update/$1');
 // $routes->match(['get', 'delete'], 'address_update/(:any)', 'Address::address_update/$1');

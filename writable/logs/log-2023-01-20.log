@@ -1,0 +1,54 @@
+CRITICAL - 2023-01-20 00:39:21 --> Undefined array key "is_default"
+in APPPATH\Models\UserAddressModel.php on line 98.
+ 1 APPPATH\Models\UserAddressModel.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "is_default"', 'APPPATH\\Models\\UserAddressModel.php', 98)
+ 2 APPPATH\Controllers\Address.php(63): App\Models\UserAddressModel->update_address([...])
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Address->address_update()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Address))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-20 02:12:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL' at line 2 in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `us...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(984): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\wamp64\www\JetreneEshop\app\Controllers\Address.php(71): CodeIgniter\BaseModel->delete()
+#7 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Address->address_delete()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Address))
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#12 {main}
+ERROR - 2023-01-20 02:12:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL' at line 2 in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `us...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(984): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\wamp64\www\JetreneEshop\app\Controllers\Address.php(71): CodeIgniter\BaseModel->delete()
+#7 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Address->address_delete()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Address))
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#12 {main}
+ERROR - 2023-01-20 02:12:18 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL' at line 2 in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `us...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `us...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `us...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `us...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(984): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\wamp64\www\JetreneEshop\app\Controllers\Address.php(71): CodeIgniter\BaseModel->delete()
+#7 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Address->address_delete()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Address))
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#12 {main}
