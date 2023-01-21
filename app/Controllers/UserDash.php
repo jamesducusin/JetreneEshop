@@ -23,14 +23,7 @@ class UserDash extends BaseController
     {
         return view('SingleView');
     }
-    public function support()
-    {
-        return view('UserDash/SupportView');
-    }
-    public function singlesupport()
-    {
-        return view('UserDash/SingleSupportView');
-    }
+    
     public function profile()
     {
         return view('UserDash/ProfileView');

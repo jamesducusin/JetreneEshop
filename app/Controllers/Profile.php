@@ -15,11 +15,14 @@ class Profile extends BaseController
         $this->profileModel = new \App\Models\ProfileModel();
         helper(['url', 'form', 'modal']);
         $this->session = session();
+        $this->session->setFlashdata('profiletab', true);
     }
 
     public function profile_retrieve()
     {
-        $data['profile'] = $this->profileModel->profileAccount();
+        $data = [
+            'profile' => $this->profileModel->profileAccount(),
+        ];
         return view('UserDash/Profileview', $data);
         
     }
@@ -72,33 +75,34 @@ class Profile extends BaseController
         $accountModel = new \App\Models\AuthModel();
         $account = $accountModel->where('id', $this->session->get('id'))->first();
         $this->session->setFlashdata('account', true);
-
-        if($account['email'] != $this->request->getPost('email')){
-            $accountModel->set('email', $this->request->getPost('email'))->where('id', $this->session->get('id'))->update();
-        }
-
-        $password = $this->request->getPost('current_password');
         $newPassword = $this->request->getPost('new_password');
-        $confirmPassword = $this->request->getPost('confirm_password');
-        $check_password = Hash::Check($password, $account['password']);
-        $validation = $this->validate($accountModel->updateRules);
+        $email = $this->request->getPost('email');
 
-        if(!$check_password) {
-            $this->session->setFlashdata('validation', 'incorrect password');
-        }
-        else{
+        if(!empty($newPassword) || $account['email'] != $email){
+            if($account['email'] != $email){
+                $accountModel->set('email', $this->request->getPost('email'))->where('id', $this->session->get('id'))->update();
+                return redirect()->route('logout');
+            }
+
+            $validation = $this->validate($accountModel->updateRules);
+    
             if(!$validation){
                 $data = [
                     'profile' => $this->profileModel->profileAccount(),
-                    'validation' => $this->validator
+                    'validation' => $this->validator,
                 ];
-                return view('UserDash/ProfileView', $data); 
-            }
+                return view('UserDash/ProfileView', $data);
+             }
             else{
-                $accountModel->set('password', $this->request->getPost('new_password'))->where('id', $this->session->get('id'))->update();
-            }
+                $accountModel->set('password', $newPassword)->where('id', $this->session->get('id'))->update();
+                return redirect()->route('logout');
+             }
         }
-        return redirect()->route('profile_retrieve');
+        else{
+            return redirect()->route('profile_retrieve');
+        }
+        
+        
         
        
     }

@@ -76,6 +76,8 @@ $routes->post('/profile_insert', 'Profile::profile_insert');
 $routes->post('/profile_update', 'Profile::profile_update');
 $routes->post('/account_update', 'Profile::account_update');
 
+
+
 // $routes->match(['get', 'put'], 'address_update/(:any)', 'Address::address_update/$1');
 // $routes->match(['get', 'delete'], 'address_update/(:any)', 'Address::address_update/$1');
 

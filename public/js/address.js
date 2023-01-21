@@ -89,8 +89,6 @@ $('#editAddress').on('show.bs.modal', function(event) {
     modal.find('#postalcodeInput').val(postalcode)
     modal.find('#labelInput').val(label_as)
     modal.find('#idHidden').val(id)
-
-    
 })
 
 $('table input[type="radio"]').on('click', function() {

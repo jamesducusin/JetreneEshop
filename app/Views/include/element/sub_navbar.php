@@ -8,7 +8,7 @@
     </a>
     <?php endif; ?>
     <?php if (session()->get('login') && !session()->getFlashdata('logout')) : ?>
-        <a class="navbar-tool d-none d-lg-flex" href="orders"><span class="navbar-tool-tooltip">Dashboard</span>
+        <a class="navbar-tool d-none d-lg-flex" href="profile_retrieve"><span class="navbar-tool-tooltip">Dashboard</span>
             <div class="navbar-tool-icon-box"><i class="navbar-tool-icon czi-user-circle"></i></div>
         </a>
     <?php else : ?>

@@ -12,15 +12,18 @@ class Shop extends BaseController
 
     public function shop()
     {
+        session()->setFlashdata('shop', true);
         return view('shopview');
     }
     public function shoplist()
     {
+  
         return view('ShopListView');
     }
 
     public function shop_category()
     {
+        session()->setFlashdata('category', true);
         return view('categoryview');
     }
 }

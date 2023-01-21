@@ -13,6 +13,7 @@ class Help extends BaseController
 
     public function helpcenter()
     {
+        session()->setFlashdata('helpcenter', true);
         return view('HelpView');
     }
     public function helpsingle()

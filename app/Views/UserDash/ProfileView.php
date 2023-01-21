@@ -12,33 +12,12 @@
 <body class="toolbar-enabled">
     <!-- Sign in / sign up modal-->
     <?= $this->include('include/modal/signup_modal'); ?>
+    <?= $this->include('include/modal/password_modal'); ?>
 
     <!-- Navbar-->
     <?= $this->include('include/modal/support_modal'); ?>
     <!-- Navbar-->
-    <header class="bg-dark navbar-sticky">
-        <div class="navbar navbar-expand-lg navbar-dark">
-            <div class="container"><a class="navbar-brand d-none d-sm-block mr-4 order-lg-1" href="home" style="min-width: 7rem;"><img width="142" src="img/logo-light.png" alt="JetreneEshop" /></a><a class="navbar-brand d-sm-none mr-2 order-lg-1" href="home" style="min-width: 4.625rem;"><img width="74" src="img/logo-icon-light.png" alt="JetreneEshop" /></a>
-                <!-- Sub Navbar -- cart-wishlist-tracking-->
-                <?= $this->include('include/element/sub_navbar'); ?>
-                <div class="collapse navbar-collapse mr-auto order-lg-2" id="navbarCollapse">
-                    <!-- Search-->
-                    <?= $this->include('include/element/search'); ?>
-                    <!-- Primary menu-->
-                    <ul class="navbar-nav">
-                        <li><a class="nav-link" href="home">Home</li></a>
-                        <li><a class="nav-link" href="shop">Shop</a></li>
-                        <li><a class="nav-link" href="shop_category">Categories</a></li>
-                        <li><a class="nav-link" href="helpcenter">Help Center</a></li>
-                        <li><a class="nav-link " href="about">About us</a></li>
-                        <li><a class="nav-link" href="contacts">Contacts</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- Search collapse-->
-        <?= $this->include('include/element/search_collapse'); ?>
-    </header>
+    <?= $this->include('include/element/header'); ?>
     <!-- Page title-->
     <!-- Page Title-->
     <div class="page-title-overlap bg-dark pt-4">
@@ -62,33 +41,7 @@
     <div class="container pb-5 mb-2 mb-md-3">
         <div class="row">
             <!-- Sidebar-->
-            <aside class="col-lg-4 pt-4 pt-lg-0">
-                <div class="cz-sidebar-static rounded-lg box-shadow-lg px-0 pb-0 mb-5 mb-lg-0">
-                    <div class="px-4 mb-4">
-                        <div class="media align-items-center">
-                            <div class="img-thumbnail rounded-circle position-relative" style="width: 6.375rem;"><span class="badge badge-success" data-toggle="tooltip" title="online"> </span><img class="rounded-circle" src="<?= isset($profile[0]) ? $profile[0]['avatar'] : 'img/avatar/default-avatar.jpg' ?>" alt="<?= isset($profile[0]) ? $profile[0]['firstName'] : 'user'; ?>"></div>
-                            <div class="media-body pl-3">
-                                <h3 class="font-size-base mb-0"><?= isset($profile[0]) ? $profile[0]['firstName'] . " " . $profile[0]['lastName'] :  "Anonymous"; ?></h3><span class="text-accent font-size-sm"><?= session()->get('email') ?></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-secondary px-4 py-3">
-                        <h3 class="font-size-sm mb-0 text-muted">Dashboard</h3>
-                    </div>
-                    <ul class="list-unstyled mb-0">
-                        <li class="border-bottom mb-0"><a class="nav-link-style d-flex align-items-center px-4 py-3" href="orders"><i class="czi-bag opacity-60 mr-2"></i>Orders<span class="font-size-sm text-muted ml-auto">1</span></a></li>
-                        <li class="border-bottom mb-0"><a class="nav-link-style d-flex align-items-center px-4 py-3" href="wishlist"><i class="czi-heart opacity-60 mr-2"></i>Wishlist<span class="font-size-sm text-muted ml-auto">3</span></a></li>
-                        <li class="mb-0"><a class="nav-link-style d-flex align-items-center px-4 py-3" href="support"><i class="czi-help opacity-60 mr-2"></i>Support tickets<span class="font-size-sm text-muted ml-auto">1</span></a></li>
-                    </ul>
-                    <div class="bg-secondary px-4 py-3">
-                        <h3 class="font-size-sm mb-0 text-muted">Account settings</h3>
-                    </div>
-                    <ul class="list-unstyled mb-0">
-                        <li class="border-bottom mb-0"><a class="nav-link-style d-flex align-items-center px-4 py-3 active" href="profile_retrieve"><i class="czi-user opacity-60 mr-2"></i>Profile info</a></li>
-                        <li class="border-bottom mb-0"><a class="nav-link-style d-flex align-items-center px-4 py-3" href="address_retrieve"><i class="czi-location opacity-60 mr-2"></i>Addresses</a></li>
-                    </ul>
-                </div>
-            </aside>
+            <?= $this->include('include/element/sidebar'); ?>
             <!-- Content  -->
 
             <section class="col-lg-8 pt-lg-4 pb-4 mb-3">
@@ -102,7 +55,7 @@
                                 <div class="d-none d-lg-block"><i class="czi-user opacity-60 mr-2"></i>Profile</div>
                                 <div class="d-lg-none text-center"><i class="czi-user opacity-60 d-block font-size-xl mb-2"></i><span class="font-size-ms">Profile</span></div>
                             </a></li>
-                        <li class="nav-item"><a class="nav-link px-0" href="#account" data-toggle="tab" role="tab">
+                        <li class="nav-item"><a class="nav-link px-0" href="#account" data-toggle="tab" id="tabAccount" role="tab">
                                 <div class="d-none d-lg-block"><i class="czi-bell opacity-60 mr-2"></i>Account</div>
                                 <div class="d-lg-none text-center"><i class="czi-bell opacity-60 d-block font-size-xl mb-2"></i><span class="font-size-ms">Notifications</span></div>
                             </a></li>
@@ -202,7 +155,7 @@
                                     <div class="col-12">
                                         <hr class="mt-2 mb-3">
                                         <div class="d-flex flex-wrap justify-content-between align-items-center" style="float: right;">
-                                            <button class="btn btn-primary mt-3 mt-sm-0" id="save" type="button">Save Changes</button>
+                                            <button class="btn btn-primary mt-3 mt-sm-0" id="save" data-toggle="modal" data-target="#updateAccount" type="button">Save Changes</button>
                                         </div>
                                     </div>
                                 </div>
@@ -241,7 +194,7 @@
 
         });
 
-        var account = "<?= session()->getFlashdata('account') ?>"
+
         if (account) {
             $("#account").click();
         }
@@ -261,6 +214,39 @@
             $("#modal-content").html(inputValue);
             $("#modal").show();
         });
+
+        $('#updateAccount').on('show.bs.modal', function(event) {
+            var email = $("#email").val();
+            var newPassword = $("#new").val();
+            var confirmPassword = $("#confirm").val();
+            $("#nemail").val(email);
+            $("#npassword").val(newPassword);
+            $("#cpassword").val(confirmPassword);
+
+        });
+        $("#current_password").keyup(function(){
+            var currentPass = "<?= session()->get('password')?>";
+            var inputPass = $("#current_password").val();
+
+            
+            if(inputPass == currentPass) {
+                $("#submitUpdate").prop('disabled', false)
+                $("#validation").text('✓ Password match').css('color', 'green');
+            }else{
+                $("#submitUpdate").prop('disabled', true)
+                $("#validation").text('✓ Password match').css('color', 'red');
+                $("#validation").text('Incorrect password');
+            }
+
+        });
+
+        if($("#current_password").val() == '') {
+            $("#submitUpdate").prop('disabled', true)
+        }
+        var account = "<?= session()->getFlashdata('account')?>";
+        if(account) {
+            $('#tabAccount').click();
+        }
     </script>
 </body>
 

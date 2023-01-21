@@ -18,6 +18,7 @@ class Address extends BaseController
         $this->userAddressModel = new UserAddressModel();
         helper(['url', 'form', 'modal']);
         $this->session = session();
+        $this->session->setFlashdata('addresstab', true);
     }
 
     public function address_retrieve($address_id = null)
