@@ -70,8 +70,11 @@ $routes->post('/address_update', 'Address::address_update');
 $routes->post('/address_delete', 'Address::address_delete');
 $routes->post('/address_insert', 'Address::address_insert');
 
-//Orders
+//Profile
 $routes->get('/profile_retrieve', 'Profile::profile_retrieve');
+$routes->post('/profile_insert', 'Profile::profile_insert');
+$routes->post('/profile_update', 'Profile::profile_update');
+$routes->post('/account_update', 'Profile::account_update');
 
 // $routes->match(['get', 'put'], 'address_update/(:any)', 'Address::address_update/$1');
 // $routes->match(['get', 'delete'], 'address_update/(:any)', 'Address::address_update/$1');

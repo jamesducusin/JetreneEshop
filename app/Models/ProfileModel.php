@@ -14,7 +14,7 @@ class ProfileModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['user_id', 'firstname', 'lastname', 'contact', 'avatar', 'gender', 'birthday'];
+    protected $allowedFields    = ['user_id', 'firstName', 'lastName', 'contact', 'avatar', 'gender', 'birthday'];
 
     // Dates
     protected $useTimestamps = true;
@@ -24,7 +24,7 @@ class ProfileModel extends Model
    
 
     // Validation
-    protected $validationRules      = [];
+
     protected $validationMessages   = [];
     protected $skipValidation       = false;
     protected $cleanValidationRules = true;
@@ -39,4 +39,13 @@ class ProfileModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+
+    public function profileAccount()
+    {
+        return $this->select('*')
+        ->join('Users', 'user_id = id', 'right')
+        ->where('user_id', session()->get('id'))->find();
+    }
+    
 }
