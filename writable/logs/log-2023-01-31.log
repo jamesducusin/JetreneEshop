@@ -1,0 +1,122 @@
+ERROR - 2023-01-31 00:16:17 --> mysqli_sql_exception: Table 'dbeshopper.profiles' doesn't exist in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(185): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(524): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\wamp64\www\JetreneEshop\app\Models\ProfileModel.php(48): CodeIgniter\BaseModel->find()
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Profile.php(24): App\Models\ProfileModel->profileAccount()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Profile->profile_retrieve()
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+CRITICAL - 2023-01-31 00:16:17 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 185.
+ 1 SYSTEMPATH\BaseModel.php(524): CodeIgniter\Model->doFind(false, null)
+ 2 APPPATH\Models\ProfileModel.php(48): CodeIgniter\BaseModel->find()
+ 3 APPPATH\Controllers\Profile.php(24): App\Models\ProfileModel->profileAccount()
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Profile->profile_retrieve()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-31 00:58:48 --> mysqli_sql_exception: Table 'dbeshopper.categories' doesn't exist in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#12 {main}
+CRITICAL - 2023-01-31 00:58:48 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Categories.php(22): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-31 01:02:18 --> mysqli_sql_exception: Table 'dbeshopper.categories' doesn't exist in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#12 {main}
+CRITICAL - 2023-01-31 01:02:18 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Categories.php(22): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-31 01:02:20 --> mysqli_sql_exception: Table 'dbeshopper.categories' doesn't exist in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#12 {main}
+CRITICAL - 2023-01-31 01:02:20 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Categories.php(22): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-31 01:02:20 --> mysqli_sql_exception: Table 'dbeshopper.categories' doesn't exist in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#12 {main}
+CRITICAL - 2023-01-31 01:02:20 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 224.
+ 1 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Categories.php(22): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -18,7 +18,6 @@
     <?= $this->include('include/modal/editAddress_modal'); ?>
     <?= $this->include('include/modal/delete_modal'); ?>
     <!-- Navbar-->
-    <?= $this->include('include/modal/support_modal'); ?>
     <!-- Notification Toast-->
     <?= $this->include('include/element/notif_toast'); ?>
 
@@ -54,19 +53,7 @@
                     <h6 class="font-size-base text-light mb-0">List of your registered addresses:</h6><a class="btn btn-primary btn-sm" href="<?= base_url() ?>/logout"><i class="czi-sign-out mr-2"></i>Sign out</a>
 
                 </div>
-                <!-- Addresses list-->
-                <?php if (session()->getFlashdata('edit')) : ?>
-                    <script>
-                        window.addEventListener('load', function() {
-                            document.getElementById("openedit").click();
-                        })
-                    </script>
-                <?php endif; ?>
-
-                <?= ActionModal('success', 'opentoast'); ?>
-                <?= ActionModal('failed', 'opentoast'); ?>
-
-
+                
                 <div class="table-responsive font-size-md">
                     <table class="table table-hover mb-0">
                         <thead>
@@ -92,7 +79,6 @@
                                         </a>
                                     </td>
                                     <td style="display:none">
-                                        <a id='openedit' href="#add-address" data-toggle="modal"></a>
                                         <a id="delete" href="#" data-toggle="tooltip" title="Remove"></a>
                                     </td>
                                 </tr>
@@ -122,6 +108,8 @@
 
     <script type="text/javascript" src="https://f001.backblazeb2.com/file/buonzz-assets/jquery.ph-locations.js"></script>
     <script src="<?= base_url() ?>/js/address.js"></script>
+    <?= ActionModal('success', 'opentoast'); ?>
+    <?= ActionModal('failed', 'opentoast'); ?>
 
 
 </body>

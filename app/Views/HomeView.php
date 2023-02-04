@@ -13,7 +13,7 @@
 <body class="toolbar-enabled">
     <!-- Sign in / sign up modal-->
     <?= $this->include('include/modal/signup_modal'); ?>
-    
+
     <!-- Quick View Modal-->
     <?= $this->include('include/modal/quick_modal'); ?>
     <!-- Navbar-->
@@ -119,7 +119,7 @@
                             </div>
                         </div>
                         <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                       
+
                     </div>
                 </div>
                 <hr class="d-sm-none">
@@ -167,7 +167,7 @@
                             </select>
                             <button class="btn btn-primary btn-sm" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
                         </div>
-                       
+
                     </div>
                 </div>
                 <hr class="d-sm-none">
@@ -204,7 +204,7 @@
                             </div>
                         </div>
                         <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                       
+
                     </div>
                 </div>
                 <hr class="d-sm-none">
@@ -237,7 +237,7 @@
                             </div>
                         </div>
                         <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                       
+
                     </div>
                 </div>
                 <hr class="d-sm-none">
@@ -274,7 +274,7 @@
                             </div>
                         </div>
                         <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                       
+
                     </div>
                 </div>
                 <hr class="d-sm-none">
@@ -292,7 +292,7 @@
                         </div>
                     </div>
                     <div class="card-body card-body-hidden"><a class="btn btn-secondary btn-sm btn-block mb-2" href="single">View details</a>
-                       
+
                     </div>
                 </div>
                 <hr class="d-sm-none">
@@ -325,7 +325,7 @@
                             </div>
                         </div>
                         <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                       
+
                     </div>
                 </div>
                 <hr class="d-sm-none">
@@ -362,7 +362,7 @@
                             </div>
                         </div>
                         <button class="btn btn-primary btn-sm btn-block mb-2" type="button" data-toggle="toast" data-target="#cart-toast"><i class="czi-cart font-size-sm mr-1"></i>Add to Cart</button>
-                       
+
                     </div>
                 </div>
                 <hr class="d-sm-none">
@@ -597,6 +597,16 @@
     <script src="vendor/drift-zoom/dist/Drift.min.js"></script>
     <!-- Main theme script-->
     <script src="js/theme.min.js"></script>
+    <script src="assets/js/pages/two-step-verification.init.js"></script>
+    <script>
+        $("#openmodal").click();
+        var signup = "<?=session()->getFlashdata('validatereg')?>";
+        if(signup)
+            $("#signup").click();
+        else
+            $("#signin").click();
+        
+    </script>
 
 </body>
 

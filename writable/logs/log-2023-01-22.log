@@ -1,0 +1,14 @@
+CRITICAL - 2023-01-22 00:13:51 --> Invalid file: partials/customizer.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/customizer.php')
+ 2 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('partials/customizer', null, true)
+ 3 APPPATH\Views\AdminDash\ProductView.php(427): CodeIgniter\View\View->include('partials/customizer')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\AdminDash\\ProductView.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('AdminDash/ProductView', [], true)
+ 7 APPPATH\Controllers\Products.php(11): view('AdminDash/ProductView')
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Products->ProductList()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Products))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

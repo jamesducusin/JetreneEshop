@@ -1,0 +1,1000 @@
+ERROR - 2023-02-01 05:40:41 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update('1', Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+CRITICAL - 2023-02-01 05:40:41 --> The route for "Categorylist" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('Categorylist')
+ 2 APPPATH\Controllers\Categories.php(33): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-01 05:41:20 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update('1', Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+CRITICAL - 2023-02-01 05:43:35 --> `App\Models\CategoryModel` model class does not have a valid dateFormat.
+in SYSTEMPATH\BaseModel.php on line 1218.
+ 1 SYSTEMPATH\BaseModel.php(1218): CodeIgniter\Exceptions\ModelException::forNoDateFormat('App\\Models\\CategoryModel')
+ 2 SYSTEMPATH\BaseModel.php(1185): CodeIgniter\BaseModel->intToDate(1675251815)
+ 3 SYSTEMPATH\BaseModel.php(871): CodeIgniter\BaseModel->setDate()
+ 4 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update(null, [...])
+ 5 APPPATH\Controllers\Categories.php(30): CodeIgniter\Model->update()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-01 05:44:12 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:44:13 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:44:17 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:44:41 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:44:42 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:44:52 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:47:28 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:49:46 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:49:53 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:51:00 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:51:48 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:51:49 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:51:51 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:52:06 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(30): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:55:17 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(33): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:55:18 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(33): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:55:22 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(33): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:55:48 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(34): CodeIgniter\Model->update('1', Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:56:01 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(34): CodeIgniter\Model->update('1', Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:56:38 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(33): CodeIgniter\Model->update('1', Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:56:41 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(33): CodeIgniter\Model->update('1', Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+CRITICAL - 2023-02-01 05:57:24 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1598.
+ 1 SYSTEMPATH\BaseModel.php(1598): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Categories.php(33): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-01 05:58:02 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(33): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:58:36 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(33): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:58:38 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(33): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 05:58:43 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `product...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `product...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `product...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `product...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(NULL, Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(693): CodeIgniter\BaseModel->update(NULL, Array)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(33): CodeIgniter\Model->update()
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->statusUpdate('1', '0')
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+CRITICAL - 2023-02-01 06:36:54 --> syntax error, unexpected token ")"
+in APPPATH\Views\AdminDash\CategoryListView.php on line 157.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('AdminDash/CategoryListView', [], true)
+ 3 APPPATH\Controllers\Categories.php(25): view('AdminDash/CategoryListView', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 07:09:54 --> Undefined array key "json_catefory"
+in APPPATH\Controllers\Categories.php on line 28.
+ 1 APPPATH\Controllers\Categories.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "json_catefory"', 'APPPATH\\Controllers\\Categories.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 07:16:07 --> Undefined variable $categories
+in APPPATH\Views\AdminDash\CategoryListView.php on line 64.
+ 1 APPPATH\Views\AdminDash\CategoryListView.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $categories', 'APPPATH\\Views\\AdminDash\\CategoryListView.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\AdminDash\\CategoryListView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('AdminDash/CategoryListView', [], true)
+ 5 APPPATH\Controllers\Categories.php(30): view('AdminDash/CategoryListView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 07:17:38 --> Undefined variable $features
+in APPPATH\Views\AdminDash\CategoryListView.php on line 117.
+ 1 APPPATH\Views\AdminDash\CategoryListView.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $features', 'APPPATH\\Views\\AdminDash\\CategoryListView.php', 117)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\AdminDash\\CategoryListView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('AdminDash/CategoryListView', [], true)
+ 5 APPPATH\Controllers\Categories.php(25): view('AdminDash/CategoryListView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 08:07:11 --> Undefined variable $[{"id":"1","category_name":"Footwears","category_image":"footwears.jpg","product_features":"size, color","status":"1"},{"id":"2","category_name":"Clothings","category_image":"clothings.jpg","product_features":"size, color","status":"1"},{"id":"3","category_name":"Jewelries","category_image":"jewelries.png","product_features":"color","status":"1"},{"id":"4","category_name":"Electronics","category_image":"electronics.jpg","product_features":"color","status":"0"},{"id":"5","category_name":"Plastic wares","category_image":"plasticware.jpg","product_features":"color","status":"0"},{"id":"6","category_name":"Kitchen utensils","category_image":"kitchen.jpg","product_features":"color","status":"0"}]
+in APPPATH\Views\AdminDash\CategoryListView.php on line 183.
+ 1 APPPATH\Views\AdminDash\CategoryListView.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $[{"id":"1","category_name":"Footwears","category_image":"footwears.jpg","product_features":"size, color","status":"1"},{"id":"2","category_name":"Clothings","category_image":"clothings.jpg","product_features":"size, color","status":"1"},{"id":"3","category_name":"Jewelries","category_image":"jewelries.png","product_features":"color","status":"1"},{"id":"4","category_name":"Electronics","category_image":"electronics.jpg","product_features":"color","status":"0"},{"id":"5","category_name":"Plastic wares","category_image":"plasticware.jpg","product_features":"color","status":"0"},{"id":"6","category_name":"Kitchen utensils","category_image":"kitchen.jpg","product_features":"color","status":"0"}]', 'APPPATH\\Views\\AdminDash\\CategoryListView.php', 183)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\AdminDash\\CategoryListView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('AdminDash/CategoryListView', [], true)
+ 5 APPPATH\Controllers\Categories.php(24): view('AdminDash/CategoryListView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 08:07:43 --> Undefined variable $[{"id":"1","category_name":"Footwears","category_image":"footwears.jpg","product_features":"size, color","status":"1"},{"id":"2","category_name":"Clothings","category_image":"clothings.jpg","product_features":"size, color","status":"1"},{"id":"3","category_name":"Jewelries","category_image":"jewelries.png","product_features":"color","status":"1"},{"id":"4","category_name":"Electronics","category_image":"electronics.jpg","product_features":"color","status":"0"},{"id":"5","category_name":"Plastic wares","category_image":"plasticware.jpg","product_features":"color","status":"0"},{"id":"6","category_name":"Kitchen utensils","category_image":"kitchen.jpg","product_features":"color","status":"0"}]
+in APPPATH\Views\AdminDash\CategoryListView.php on line 183.
+ 1 APPPATH\Views\AdminDash\CategoryListView.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $[{"id":"1","category_name":"Footwears","category_image":"footwears.jpg","product_features":"size, color","status":"1"},{"id":"2","category_name":"Clothings","category_image":"clothings.jpg","product_features":"size, color","status":"1"},{"id":"3","category_name":"Jewelries","category_image":"jewelries.png","product_features":"color","status":"1"},{"id":"4","category_name":"Electronics","category_image":"electronics.jpg","product_features":"color","status":"0"},{"id":"5","category_name":"Plastic wares","category_image":"plasticware.jpg","product_features":"color","status":"0"},{"id":"6","category_name":"Kitchen utensils","category_image":"kitchen.jpg","product_features":"color","status":"0"}]', 'APPPATH\\Views\\AdminDash\\CategoryListView.php', 183)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\AdminDash\\CategoryListView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('AdminDash/CategoryListView', [], true)
+ 5 APPPATH\Controllers\Categories.php(24): view('AdminDash/CategoryListView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 08:08:09 --> Undefined variable $[{"id":"1","category_name":"Footwears","category_image":"footwears.jpg","product_features":"size, color","status":"1"},{"id":"2","category_name":"Clothings","category_image":"clothings.jpg","product_features":"size, color","status":"1"},{"id":"3","category_name":"Jewelries","category_image":"jewelries.png","product_features":"color","status":"1"},{"id":"4","category_name":"Electronics","category_image":"electronics.jpg","product_features":"color","status":"0"},{"id":"5","category_name":"Plastic wares","category_image":"plasticware.jpg","product_features":"color","status":"0"},{"id":"6","category_name":"Kitchen utensils","category_image":"kitchen.jpg","product_features":"color","status":"0"}]
+in APPPATH\Views\AdminDash\CategoryListView.php on line 183.
+ 1 APPPATH\Views\AdminDash\CategoryListView.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $[{"id":"1","category_name":"Footwears","category_image":"footwears.jpg","product_features":"size, color","status":"1"},{"id":"2","category_name":"Clothings","category_image":"clothings.jpg","product_features":"size, color","status":"1"},{"id":"3","category_name":"Jewelries","category_image":"jewelries.png","product_features":"color","status":"1"},{"id":"4","category_name":"Electronics","category_image":"electronics.jpg","product_features":"color","status":"0"},{"id":"5","category_name":"Plastic wares","category_image":"plasticware.jpg","product_features":"color","status":"0"},{"id":"6","category_name":"Kitchen utensils","category_image":"kitchen.jpg","product_features":"color","status":"0"}]', 'APPPATH\\Views\\AdminDash\\CategoryListView.php', 183)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\AdminDash\\CategoryListView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('AdminDash/CategoryListView', [], true)
+ 5 APPPATH\Controllers\Categories.php(24): view('AdminDash/CategoryListView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 08:34:47 --> Undefined variable $json_category
+in APPPATH\Views\AdminDash\CategoryListView.php on line 184.
+ 1 APPPATH\Views\AdminDash\CategoryListView.php(184): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $json_category', 'APPPATH\\Views\\AdminDash\\CategoryListView.php', 184)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\AdminDash\\CategoryListView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('AdminDash/CategoryListView', [], true)
+ 5 APPPATH\Controllers\Categories.php(23): view('AdminDash/CategoryListView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 08:47:26 --> Unsupported operand types: string + string
+in APPPATH\Controllers\Categories.php on line 31.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-01 08:55:16 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(37): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 08:59:18 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(36): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+CRITICAL - 2023-02-01 09:00:10 --> Undefined array key 1
+in APPPATH\Controllers\Categories.php on line 33.
+ 1 APPPATH\Controllers\Categories.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'APPPATH\\Controllers\\Categories.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 09:02:52 --> Undefined array key 1
+in APPPATH\Controllers\Categories.php on line 34.
+ 1 APPPATH\Controllers\Categories.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'APPPATH\\Controllers\\Categories.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 09:04:07 --> syntax error, unexpected token "."
+in APPPATH\Controllers\Categories.php on line 28.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Categories.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Categories')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Categories')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Categories', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 09:04:28 --> Undefined array key 1
+in APPPATH\Controllers\Categories.php on line 35.
+ 1 APPPATH\Controllers\Categories.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'APPPATH\\Controllers\\Categories.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 09:04:42 --> Undefined array key 1
+in APPPATH\Controllers\Categories.php on line 35.
+ 1 APPPATH\Controllers\Categories.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'APPPATH\\Controllers\\Categories.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 09:04:58 --> Undefined array key 1
+in APPPATH\Controllers\Categories.php on line 35.
+ 1 APPPATH\Controllers\Categories.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'APPPATH\\Controllers\\Categories.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-01 09:05:27 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(39): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 09:08:19 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(39): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 09:08:50 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(40): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 09:09:11 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(40): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+CRITICAL - 2023-02-01 09:10:44 --> Undefined array key "product_    features"
+in APPPATH\Controllers\Categories.php on line 39.
+ 1 APPPATH\Controllers\Categories.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_    features"', 'APPPATH\\Controllers\\Categories.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-01 09:14:35 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 09:14:50 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(45): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+CRITICAL - 2023-02-01 09:18:24 --> Undefined array key "product_name"
+in APPPATH\Controllers\Categories.php on line 44.
+ 1 APPPATH\Controllers\Categories.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "product_name"', 'APPPATH\\Controllers\\Categories.php', 44)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 12:38:40 --> Undefined variable $category
+in APPPATH\Views\AdminDash\CategoryListView.php on line 76.
+ 1 APPPATH\Views\AdminDash\CategoryListView.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $category', 'APPPATH\\Views\\AdminDash\\CategoryListView.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\AdminDash\\CategoryListView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('AdminDash/CategoryListView', [], true)
+ 5 APPPATH\Controllers\Categories.php(23): view('AdminDash/CategoryListView', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->CategoryList()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-01 13:54:52 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(44): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+ERROR - 2023-02-01 13:56:24 --> mysqli_sql_exception: Column 'category_name' cannot be null in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(44): CodeIgniter\Model->insert(Array)
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+#9 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#13 {main}
+CRITICAL - 2023-02-01 14:27:52 --> count(): Argument #1 ($value) must be of type Countable|array, null given
+in APPPATH\Controllers\Categories.php on line 29.
+ 1 APPPATH\Controllers\Categories.php(29): count(null)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->addCategory()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 14:38:43 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 1598.
+ 1 SYSTEMPATH\BaseModel.php(1598): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(853): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\Categories.php(76): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->updateCategory()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 14:59:34 --> syntax error, unexpected token "]"
+in APPPATH\Controllers\Categories.php on line 95.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Categories.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Categories')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Categories')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Categories', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 15:41:35 --> Undefined variable $sub_category
+in APPPATH\Views\AdminDash\SubCategoryView.php on line 64.
+ 1 APPPATH\Views\AdminDash\SubCategoryView.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sub_category', 'APPPATH\\Views\\AdminDash\\SubCategoryView.php', 64)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\AdminDash\\SubCategoryView.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admindash/subcategoryview', [], true)
+ 5 APPPATH\Controllers\Categories.php(110): view('admindash/subcategoryview', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-01 15:44:05 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`id`
+FROM `sub_category`
+INNER JOIN `product_category` ON `product_category`.`i' at line 1 in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, `dist...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, `dist...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, `dist...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, `dist...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(108): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+#7 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#11 {main}
+CRITICAL - 2023-02-01 15:44:05 --> Call to a member function getResultArray() on bool
+in APPPATH\Controllers\Categories.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-01 15:44:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'distinct(product_category.id) as id
+FROM `sub_category`
+INNER JOIN `product_cate' at line 1 in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, disti...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, disti...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, disti...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, disti...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(108): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+#7 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#11 {main}
+CRITICAL - 2023-02-01 15:44:25 --> Call to a member function getResultArray() on bool
+in APPPATH\Controllers\Categories.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-01 15:45:53 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'distinct(product_category.id) as id
+FROM `sub_category`
+INNER JOIN `product_cate' at line 1 in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, disti...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, disti...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, disti...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, disti...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(108): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+#7 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#11 {main}
+CRITICAL - 2023-02-01 15:45:53 --> Call to a member function getResultArray() on bool
+in APPPATH\Controllers\Categories.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-01 15:45:59 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'distinct(product_category.id) as id
+FROM `sub_category`
+INNER JOIN `product_cate' at line 1 in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, disti...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, disti...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, disti...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, disti...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(108): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+#7 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#11 {main}
+CRITICAL - 2023-02-01 15:45:59 --> Call to a member function getResultArray() on bool
+in APPPATH\Controllers\Categories.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-01 15:46:10 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'distinct(product_category.id) as id
+FROM `sub_category`
+INNER JOIN `product_cate' at line 1 in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, disti...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, disti...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, disti...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, disti...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(108): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+#7 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#11 {main}
+CRITICAL - 2023-02-01 15:46:10 --> Call to a member function getResultArray() on bool
+in APPPATH\Controllers\Categories.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-01 15:46:18 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'distinct(product_category.id) as id
+FROM `sub_category`
+INNER JOIN `product_cate' at line 1 in C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, disti...', 0)
+#1 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, disti...')
+#2 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, disti...')
+#3 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *, disti...', Array, false)
+#4 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Model.php(772): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\JetreneEshop\app\Controllers\Categories.php(108): CodeIgniter\Model->__call('get', Array)
+#6 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+#7 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+#8 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\JetreneEshop\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\JetreneEshop\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\wamp64\\www\\J...')
+#11 {main}
+CRITICAL - 2023-02-01 15:46:18 --> Call to a member function getResultArray() on bool
+in APPPATH\Controllers\Categories.php on line 108.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 15:49:11 --> Cannot access offset of type string on string
+in APPPATH\Views\AdminDash\CategoryListView.php on line 76.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admindash/categorylistview', [], true)
+ 4 APPPATH\Controllers\Categories.php(109): view('admindash/categorylistview', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-01 15:49:21 --> Cannot access offset of type string on string
+in APPPATH\Views\AdminDash\CategoryListView.php on line 76.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('admindash/categorylistview', [], true)
+ 4 APPPATH\Controllers\Categories.php(109): view('admindash/categorylistview', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Categories->category('4')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Categories))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

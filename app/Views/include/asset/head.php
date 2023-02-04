@@ -19,11 +19,7 @@
     <link rel="stylesheet" media="screen" href="<?=base_url()?>/vendor/simplebar/dist/simplebar.min.css" />
     <link rel="stylesheet" media="screen" href="<?=base_url()?>/vendor/tiny-slider/dist/tiny-slider.css" />
 
-    <?php if(session()->getFlashdata('home')) : ?>
-    <script>
-      window.addEventListener('load', function() {
-        document.getElementById("openmodal").click();
-      })
-    </script>
+
+
     
-    <?php session()->remove('home'); endif; ?>
+

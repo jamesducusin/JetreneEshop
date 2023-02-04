@@ -16,6 +16,7 @@ class Auth extends BaseController
         $this->authModel = new AuthModel();
         helper(['url', 'form']);
         $this->session = session();
+        $this->session->setFlashdata('home', true);
     }
     public function index()
     {
@@ -45,21 +46,18 @@ class Auth extends BaseController
                     'id' => $dbUserInfo['id'],
                     'email' => $email,
                     'password' => $password,
-                    'usertype' => 'user',
+                    'usertype' => $dbUserInfo['usertype'],
                     'login' => true,
                 ];
                 $this->session->set($user);
                 return view('Homeview');
-
             }
-
-
         }
     }
     public function logout()
     {
-        $this->session->setFlashdata('logout', true);
         $this->session->remove('login');
+        $this->session->destroy();
         return view('Homeview');
     }
     public function validateReg()
@@ -77,12 +75,11 @@ class Auth extends BaseController
         ];
 
         if (!$validation) {
-            $this->session->setFlashdata('registermodal', 'open');
+            $this->session->setFlashdata('validatereg', '1');
             return view('Homeview',  ['validation' => $this->validator]);
         } else {
             $authModel->insert($fields);
-            return view('Homeview');
-            echo "success";
+            return redirect()->route('home');
         }
     }
 

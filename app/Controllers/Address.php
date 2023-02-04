@@ -30,7 +30,6 @@ class Address extends BaseController
         if (!isset($address_id)) {
             return view('UserDash/AddressView', $data);
         } else {
-            $this->session->setFlashdata('edit', true);
             return view('UserDash/AddressView', $data);
         }
     }
@@ -43,6 +42,7 @@ class Address extends BaseController
         ];
 
         if($this->userAddressModel->makeDefault($data)) {
+            $this->session->setFlashdata('success', 'address has been set as default');
             return redirect()->route('address_retrieve');
         }
         
@@ -62,6 +62,7 @@ class Address extends BaseController
 
 
         if($this->userAddressModel->update_address($data)) {
+            $this->session->setflashdata('success', 'Address has been updated.');
             return redirect()->route('address_retrieve');
         }
         
@@ -74,6 +75,7 @@ class Address extends BaseController
             'address_id' => $id,
         ];
         $this->userAddressModel->where($data)->delete();
+        $this->session->setFlashdata('success', 'Address has been deleted.');
         return redirect()->route('address_retrieve');
     }
     public function address_insert()
@@ -105,9 +107,9 @@ class Address extends BaseController
         ];
         if ($this->userAddressModel->is_unique($userAddress)) {
             if ($this->userAddressModel->unique_default($userAddress))
-                $this->session->setFlashdata('success', 'Address was added successfuly');
+                $this->session->setFlashdata('success', 'Address has been added.');
             else
-                $this->session->setFlashdata('success', 'Address was added successfuly and set as default address');
+                $this->session->setFlashdata('success', 'Address has been added and set as default address');
 
             $this->userAddressModel->insert($userAddress);
         } else

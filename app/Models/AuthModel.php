@@ -30,14 +30,18 @@ class AuthModel extends Model
     protected $registerRules      = [
         'email' =>[
             'rules'=>'required|valid_email|is_unique[users.email]',
-            'errors'=>['is_not_unique'=>'This email is not registered in our service.']], 
+            'errors'=>['is_unique'=>'This email is already registered in our service.']], 
         'password' => [
             'rules' => 'required|min_length[8]|regex_match[/(?=[A-Za-z0-9@#$%^&+!=~\*\-_|:.]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=~\*\-_|:.]).*$/  ]',
             'errors' =>['regex_match' => 'Passwords too weak, must have atleast<br>✓ 1 uppercase <br>✓ 1 lowercase <br>✓ 1 special character <br>✓ alphanumeric.']],
         'pass_confirm' => [
             'rules' =>'required|matches[password]',
             'errors' =>['matches' => 'The password confirmation field does not match the password field.']]];
+
     protected $updateRules = [
+        'email' =>[
+            'rules'=>'valid_email|is_unique[users.email]',
+            'errors'=>['is_unique'=>'This email is already registered in our service.']],
         'new_password' => [
             'rules' => 'required|min_length[8]|regex_match[/(?=[A-Za-z0-9@#$%^&+!=~\*\-_|:.]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=~\*\-_|:.]).*$/  ]',
             'errors' =>['regex_match' => 'Passwords too weak, must have atleast<br>✓ 1 uppercase <br>✓ 1 lowercase <br>✓ 1 special character <br>✓ alphanumeric.']],
@@ -45,7 +49,20 @@ class AuthModel extends Model
             'rules' =>'required|matches[new_password]',
             'errors' =>['matches' => 'The password confirmation field does not match the password field.']]
         ];
-
+        protected $passwordRules = [
+            'new_password' => [
+                'rules' => 'required|min_length[8]|regex_match[/(?=[A-Za-z0-9@#$%^&+!=~\*\-_|:.]+$)^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+!=~\*\-_|:.]).*$/  ]',
+                'errors' =>['regex_match' => 'Passwords too weak, must have atleast<br>✓ 1 uppercase <br>✓ 1 lowercase <br>✓ 1 special character <br>✓ alphanumeric.']],
+            'confirm_password' => [
+                'rules' =>'required|matches[new_password]',
+                'errors' =>['matches' => 'The password confirmation field does not match the password field.']]
+            ];
+            protected $emailRules = [
+            'email' =>[
+                'rules'=>'required|valid_email|is_unique[users.email]',
+                'errors'=>['is_unique'=>'This email is already registered in our service.']]
+                ];
+    
     protected $loginRules      = [           
     'email' =>[
         'rules'=>'required|valid_email|is_not_unique[users.email]',

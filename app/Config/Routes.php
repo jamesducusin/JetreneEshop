@@ -20,7 +20,10 @@ $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
-$routes->set404Override();
+$routes->set404Override(function(){
+    return view('errors/html/error_404');
+});
+
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
 // If you don't want to define all routes, please use the Auto Routing (Improved).
@@ -76,6 +79,45 @@ $routes->post('/profile_insert', 'Profile::profile_insert');
 $routes->post('/profile_update', 'Profile::profile_update');
 $routes->post('/account_update', 'Profile::account_update');
 
+//_______ ADMIN_______\\
+
+//Dashboard
+$routes->get('/dashboard', 'AdminDash::Dashboard');
+
+//Products
+$routes->get('/productList', 'Products::ProductList');
+$routes->get('/productCreate', 'Products::ProductCreate');
+$routes->get('/productDetails', 'Products::ProductDetails');
+
+//Invoice
+$routes->get('/invoiceList', 'Invoice::InvoiceList');
+$routes->get('/invoiceDetails', 'Invoice::InvoiceDetails');
+$routes->get('/invoiceCreate', 'Invoice::InvoiceCreate');
+
+//Customer
+$routes->get('/customerList', 'Customer::CustomerList');
+
+//Profile
+$routes->get('/profileDetails', 'AdminProfile::ProfileDetails');
+$routes->get('/profileSettings', 'AdminProfile::ProfileSettings');
+
+
+//Category && Subcategory
+$routes->get('/categoryList', 'Categories::CategoryList');
+$routes->post('/addCategory', 'Categories::addCategory');
+$routes->post('/addSubCategory', 'Categories::addSubCategory');
+$routes->post('/updateCategory', 'Categories::updateCategory');
+$routes->post('/updateSubCategory', 'Categories::updateSubCategory');
+$routes->get('/statusUpdate/(:any)', 'Categories::statusUpdate/$1');
+$routes->get('/subStatusUpdate/(:any)', 'Categories::subStatusUpdate/$1');
+$routes->get('/subCategory', 'Categories::subCategory');
+$routes->get('/category/(:any)', 'Categories::category/$1');
+
+//Offers
+$routes->get('/offerList', 'Products::offerList');
+$routes->post('/addOffer', 'Products::addOffer');
+$routes->post('/updateOffer', 'Products::updateOffer');
+$routes->get('/statusOfferUpdate/(:any)', 'Products::statusOfferUpdate/$1');
 
 
 // $routes->match(['get', 'put'], 'address_update/(:any)', 'Address::address_update/$1');

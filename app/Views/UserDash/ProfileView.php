@@ -13,9 +13,8 @@
     <!-- Sign in / sign up modal-->
     <?= $this->include('include/modal/signup_modal'); ?>
     <?= $this->include('include/modal/password_modal'); ?>
-
+    <?= $this->include('include/element/notif_toast'); ?>
     <!-- Navbar-->
-    <?= $this->include('include/modal/support_modal'); ?>
     <!-- Navbar-->
     <?= $this->include('include/element/header'); ?>
     <!-- Page title-->
@@ -129,6 +128,7 @@
                                         <div class="form-group">
                                             <label for="account-ln">Email</label>
                                             <input class="form-control" type="email" id="email" name="email" value="<?= session()->get('email') ?>">
+                                            <div class="invalid-feedback d-block"><?= isset($validation) ? display_error($validation, 'email') : '' ?></div>
                                         </div>
                                     </div>
 
@@ -164,6 +164,7 @@
                     </div>
             </section>
         </div>
+        <button style="display: none;" id="opentoast" data-toggle="toast" data-target="#notif-toast"></button>
     </div>
     <!-- Footer-->
     <?= $this->include('include/element/footer'); ?>
@@ -171,12 +172,18 @@
     <?= $this->include('include/asset/end'); ?>
     <!-- Main theme script-->
     <script src="js/theme.min.js"></script>
+
+    <?= ActionModal('success', 'opentoast'); ?>
+    <?= ActionModal('failed', 'opentoast'); ?>
+
     <script>
         $("#upload").click(function() {
             $("#filedialog").click();
         });
 
         var sex = "<?= isset($profile[0]) ? $profile[0]['gender'] : ''; ?>";
+       
+      
         $("#sex").val(sex);
         var button = "<?= isset($profile[0]) ? 'hasData' : ''; ?>";
 

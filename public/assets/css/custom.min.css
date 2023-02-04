@@ -1,0 +1,19 @@
+
+.category_block {
+    background-size: 100% 100%;
+    box-shadow: inset -60px -100px 50px -50px #000000;
+}
+
+.wall_category_block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 15px 15px 0px 0px;
+    padding: 0 15px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    height: 20%;
+ 
+    
+}   
